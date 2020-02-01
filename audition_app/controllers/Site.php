@@ -20,6 +20,6 @@ class Site extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->template('welcome_message');
+		$this->load->view('welcome_message');
 	}
 }
