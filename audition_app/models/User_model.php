@@ -2,10 +2,6 @@
 
 class User_model extends CI_Model
 {
-/* ----------------------------------------------------------------------------------------------
-
-this mathod insert new user in db */
-
     public function check_email($email, $phone)
     {
         $query = $this->db->select('*')
@@ -20,6 +16,15 @@ this mathod insert new user in db */
     {
         $this->db->insert('user_registration', $data);
         return $this->db->insert_id();
+    }
+    public function get_all_participants()
+    {
+        $users = $this->db->select('u.*,p.user_photo')
+        ->from('user_registration u')
+        ->join('user_photos p', 'p.user_id = u.id')
+        ->get()
+        ->result_array();
+        return $users;
     }
     public function user_image($data)
     {

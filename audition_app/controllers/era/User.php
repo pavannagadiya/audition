@@ -64,6 +64,23 @@ this method for create new user in db */
         }
     }
 
+    public function get_all_participants_get()
+    {
+        $result = $this->user_model->get_all_participants();
+        if (!empty($result)) {
+            $response = [
+                'status' => true,
+                'data' => $result,
+            ];
+        } else {
+            $response = [
+                'status' => false,
+                'message' => 'No user found !!!',
+            ];
+        }
+        $this->response($response, REST_Controller::HTTP_OK);
+    }
+
     public function product_image_post($id)
     {
         /* print_r($id);die; */
@@ -119,7 +136,6 @@ this method for create new user in db */
         $config['upload_path'] = './audition_asset/images/user_images/';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = '0';
-        $config['overwrite'] = false;
 
         return $config;
     }

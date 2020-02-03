@@ -9,7 +9,7 @@ $config = array(
         array(
                 'field' => 'user_email',
                 'label' => 'Email',
-                'rules' => 'required',
+                'rules' => 'required|valid_email',
         ),
         array(
                 'field' => 'user_state',
