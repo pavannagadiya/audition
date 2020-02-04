@@ -19,12 +19,16 @@ class User_model extends CI_Model
     }
     public function get_all_participants()
     {
-        $users = $this->db->select('u.*,p.user_photo')
+        $this->datatables->select('u.*,p.user_photo')
+            ->from('user_registration u')
+            ->add_column('View', '$1', 'callback_user_view(u.id)');
+        echo $this->datatables->generate();
+        /* $users = $this->db->select('u.*,p.user_photo')
         ->from('user_registration u')
         ->join('user_photos p', 'p.user_id = u.id')
         ->get()
         ->result_array();
-        return $users;
+        return $users; */
     }
     public function user_image($data)
     {

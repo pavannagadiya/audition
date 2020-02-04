@@ -55,3 +55,15 @@ ERROR - 2020-02-03 18:11:42 --> $config['composer_autoload'] is set to TRUE but 
 ERROR - 2020-02-03 18:11:42 --> Severity: error --> Exception: Too few arguments to function User_model::get_all_participants(), 0 passed in C:\xampp\htdocs\audition\audition_app\controllers\era\User.php on line 69 and exactly 1 expected C:\xampp\htdocs\audition\audition_app\models\User_model.php 20
 ERROR - 2020-02-03 18:12:04 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
 ERROR - 2020-02-03 18:13:01 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 20:15:41 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 20:29:18 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:13:20 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:13:23 --> Severity: Notice --> Undefined property: Slider::$user_model C:\xampp\htdocs\audition\audition_app\controllers\era\Slider.php 54
+ERROR - 2020-02-03 23:13:24 --> Severity: error --> Exception: Call to a member function get_all_slides() on null C:\xampp\htdocs\audition\audition_app\controllers\era\Slider.php 54
+ERROR - 2020-02-03 23:13:49 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:20:14 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:20:14 --> Query error: Unknown column 'img_istitle' in 'field list' - Invalid query: INSERT INTO `user_photos` (`user_id`, `user_photo`, `img_istitle`) VALUES (15, 'dipak2.png', 1)
+ERROR - 2020-02-03 23:21:04 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:21:26 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.
+ERROR - 2020-02-03 23:21:26 --> Query error: Unknown column 'img_istitle' in 'field list' - Invalid query: INSERT INTO `user_photos` (`user_id`, `user_photo`, `img_istitle`) VALUES (16, 'dipak3.png', 1)
+ERROR - 2020-02-03 23:22:30 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\audition\audition_app\vendor/autoload.php was not found.

@@ -22,4 +22,12 @@ class Slider_model extends CI_Model
             ->update('audition_slider', $data);
         return $query;
     }
+    public function get_all_slides()
+    {
+        $users = $this->db->select('*')
+        ->from('audition_slider')
+        ->get()
+        ->result_array();
+        return $users;
+    }
 }

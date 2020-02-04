@@ -49,6 +49,22 @@ class Slider extends Audi_Controller
         }
         $this->response($response, REST_Controller::HTTP_OK);
     }
+    public function get_all_slides_get()
+    {
+        $result = $this->slider_model->get_all_slides();
+        if (!empty($result)) {
+            $response = [
+                'status' => true,
+                'data' => $result,
+            ];
+        } else {
+            $response = [
+                'status' => false,
+                'message' => 'No slide found !!!',
+            ];
+        }
+        $this->response($response, REST_Controller::HTTP_OK);
+    }
     public function do_upload()
     {
         $config['upload_path'] = "./audition_asset/images/slider_images/"; //pathe where uploaded image store

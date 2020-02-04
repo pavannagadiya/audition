@@ -104,6 +104,11 @@ this method for create new user in db */
                 $data['user_id'] = $id;
                 $data['user_photo'] = $dataInfo['file_name'];
 
+                $data['img_istitle'] = 0;
+                if ($i == 0) {
+                    $data['img_istitle'] = 1;
+                }
+
                 /* split image name */
                 $str_arr = explode(".", $data['user_photo']);
                 $extension = end($str_arr); /* get last extension */
