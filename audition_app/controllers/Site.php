@@ -20,6 +20,11 @@ class Site extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->template('client/index');
+	}
+
+	public function reg()
+	{
+		$this->load->template('client/reg');
 	}
 }

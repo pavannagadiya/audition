@@ -14,7 +14,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 function callback_user_view($id)
 {
-    return '<button type="button" class="btn btn-delete" data-id=' . $id . '><i class="fa fa-eye-o" style="font-size:20px;color:#f44336"></i></button>';
+    /* return '<button type="button" class="btn btn-delete" data-id=' . $id . '><i class="fa fa-eye" aria-hidden="true" aria-hidden="true" style="font-size:20px;color:#f44336"></i></button>'; */
+
+    $edit_url = site_url('admin/participants/single_user?id=' . $id);
+    return '<a href="' . $edit_url . '"  type="button" class="btn btn-edit" data-id=' . $id . '><i class="fa fa-eye" aria-hidden="true" aria-hidden="true" style="font-size:20px;color:#f44336"></i></a>';
+}
+function callback_user_image($src)
+{
+    $img_url = "";
+    $img_url = BASE_URL('audition_asset/images/user_images/' . $src);
+    return '<img src="' . $img_url . '" alt="sorry" hight="100" width="100">';
 }
 
 /* function callback_user_image($src)
