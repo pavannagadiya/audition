@@ -13,9 +13,10 @@
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <?php foreach ($prod['images'] as $data) {?>
-
-                                   <img src="" alt="" srcset="">
+                            <?php foreach ($user['images'] as $data ) {?>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 100px;width:100px;">
+                                   <img style="width: 100%" src="<?=RES_URL;?>images/user_images/<?= $data['user_photo']; ?>" alt="" srcset="">
+                                </div>
                            <?php
 }
     ;?>

@@ -37,13 +37,20 @@ class User_model extends CI_Model
     }
     public function single_user($id)
     {
-        $users = $this->db->select('u.*,p.*')
-            ->from('user_registration u')
-            ->where('u.id', $id)
-            ->join('user_photos p', 'u.id = p.user_id', 'left outer')
+        $query = $this->db->select('*')
+            ->from('user_registration')
+            ->where('id', $id)
             ->get();
 
-        $result = $users->row_array();
+        $result = $query->row_array();
+
+        $query1 = $this->db->select('*')
+            ->from('user_photos')
+            ->where('user_id', $result['id'])
+            ->get();
+
+        $images = $query1->result_array();
+        $result['images'] = $images;
         return $result;
     }
 }

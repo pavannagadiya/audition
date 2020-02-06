@@ -27,8 +27,8 @@ class Participants extends CI_Controller
     public function single_user()
     {
         $id = $this->input->get('id');
-        $user = $this->user_model->single_user($id);
-        print_r($user);die;
-        $this->load->template_admin('admin/single_user',$user);
+        $data['user'] = $this->user_model->single_user($id);
+        // echo"<pre>";print_r($data);die;
+        $this->load->template_admin('admin/single_user',$data);
     }
 }
