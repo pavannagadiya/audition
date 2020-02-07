@@ -25,6 +25,12 @@ function callback_user_image($src)
     $img_url = BASE_URL('audition_asset/images/user_images/' . $src);
     return '<img src="' . $img_url . '" alt="sorry" hight="100" width="100">';
 }
+function callback_slider_image($src)
+{
+    $img_url = "";
+    $img_url = BASE_URL('audition_asset/images/slider_images/' . $src);
+    return '<img src="' . $img_url . '" alt="sorry" hight="100" width="300">';
+}
 
 /* function callback_user_image($src)
 {
