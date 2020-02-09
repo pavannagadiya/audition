@@ -27,8 +27,14 @@
 		<!-- Menu -->
 		<div class="menu">
 			<ul class="list">
-				<li class="header">MAIN NAVIGATION</li>
+				<li class="header">NAVIGATION</li>
 				<li class="active">
+					<a href=<?= site_url("admin/admin/index") ?>>
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
 					<a href=<?= site_url("admin/participants/load_participants") ?>>
 						<i class="material-icons">home</i>
 						<span>Participants</span>

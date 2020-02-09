@@ -14,7 +14,8 @@ class User_model extends CI_Model
 
     public function create_user($data)
     {
-        $this->db->insert('user_registration', $data);
+        $this->db->insert('user_registration', $data)
+        ->from('user_registration');
         return $this->db->insert_id();
     }
     public function get_all_participants()
@@ -34,6 +35,16 @@ class User_model extends CI_Model
     {
         $query = $this->db->insert('user_photos', $data);
         return $query;
+    }
+    public function user_counts()
+    {
+        $data['user'] = $this->db->select('*')
+            ->from('user_registration')
+            ->get()->num_rows();
+        $data['slider'] = $this->db->select('*')
+            ->from('audition_slider')
+            ->get()->num_rows();
+        return $data;
     }
     public function single_user($id)
     {
