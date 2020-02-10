@@ -11,12 +11,36 @@
 						</h2>
 					</div>
 					<div class="body">
+						<div id="slider_modal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+
+								<!-- Modal content-->
+								<div class="modal-content">
+									<form id="add_slider">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Add Slider</h4>
+										</div>
+										<div class="modal-body">
+											<label for="slider_photo"><b>Upload Slider</b></label>
+											<input type="file" name="slider_photo" required>
+										</div>
+										<div class="modal-footer">
+											<button type="submit" class="btn btn-primary">Submit</button>
+											<button type="reset" class="btn btn-danger">Reset</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
 						<div class="table-responsive">
-							<button>abc</button>
+							<button class="btn btn-primary add" data-toggle="modal" data-target="#slider_modal"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<br>
 							<table id="data-table-cat" class="table table-bordered table-striped table-hover js-basic-example dataTable">
 								<thead>
 									<tr>
-										<th>Participants Photo</th>
+										<th>Sliders</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -41,29 +65,34 @@
 				type: 'GET',
 			},
 		});
-		/* $('#data-table-cat').on('click', '.btn-delete', function(e) {
-		    var category_id = $(this).attr('data-id');
-		    $.ajax({
-		        url: "<?= site_url('era/category/delete_category') ?>",
-		        type: 'post',
-		        data: {
-		            'category_id': category_id
-		        },
-		        headers: {
-		            'era-token': '<?= $admin_info[0]; ?>',
-		        },
-		        dataType: 'json',
-		        beforeSend: function() {
-		            $(".preload").attr('style', 'display:block');
-		        },
-		        success: function(data) {
-		            $(".preload").attr('style', 'display:none');
-		            $('#data-table-cat').DataTable().ajax.reload();
-		        },
-		        error: function() {
-		            console.log('error');
-		        }
-		    });
-		}); */
+		$('#add_slider').on('submit', function(e) {
+			e.preventDefault();
+			var form = $('#add_slider');
+			var form_data = new FormData($(form)[0]);
+			console.log(form);
+
+			$.ajax({
+				url: "<?= site_url('era/slider/add_slider') ?>",
+				type: 'post',
+				dataType: 'json',
+				data: form_data,
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$(".preload").attr('style', 'display:block');
+				},
+
+				success: function(data) {
+					console.log(data);
+					$('#slider_modal').modal('hide');
+					document.getElementById("add_slider").reset();
+					$('#data-table-cat').DataTable().ajax.reload();
+					$(".preload").attr('style', 'display:none');
+				},
+				error: function() {
+					console.log('error');
+				}
+			});
+		});
 	});
 </script>

@@ -15,11 +15,11 @@ class Slider extends CI_Controller
 
 	public function all_slider()
 	{
-		$this->datatables->select('*')
+		$this->datatables->select('id,slider_photo')
 			->from('audition_slider')
 			->unset_column('slider_photo')
 			->unset_column('id')
-			->add_column('Image', '$1', 'callback_slider_image(slider_photo)');
+			->add_column('Sliders', '$1', 'callback_slider_image(slider_photo,id)');
 		echo $this->datatables->generate();
 	}
 }
