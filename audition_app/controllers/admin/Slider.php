@@ -17,9 +17,10 @@ class Slider extends CI_Controller
 	{
 		$this->datatables->select('id,slider_photo')
 			->from('audition_slider')
-			->unset_column('slider_photo')
 			->unset_column('id')
-			->add_column('Sliders', '$1', 'callback_slider_image(slider_photo,id)');
+			->unset_column('slider_photo')
+			->add_column('Sliders', '$1', 'callback_slider_image(slider_photo)')
+			->add_column('Change', '$1', 'callback_slider_change(id)');
 		echo $this->datatables->generate();
 	}
 }
