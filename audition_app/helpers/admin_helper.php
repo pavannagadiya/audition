@@ -23,6 +23,10 @@ function callback_slider_change($id)
 {
 	return '<a  type="button" data-toggle="modal" data-target="#change_slider_modal" class="btn btn-edit" data-id=' . $id . '><i class="fa fa-eye" aria-hidden="true" aria-hidden="true" style="font-size:20px;color:#f44336"></i></a>';
 }
+function callback_slider_delete($id)
+{
+	return '<a  type="button" class="btn btn-edit" data-id=' . $id . '><i class="fa fa-pencil" aria-hidden="true" aria-hidden="true" style="font-size:20px;color:#f44336"></i></a>';
+}
 function callback_user_image($src)
 {
 	$img_url = "";

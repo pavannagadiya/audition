@@ -63,10 +63,16 @@
             <div id="slider" class="sl-slider-wrapper">
 
 				<div class="sl-slider">
-				
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<?php
+					        $count = 0;
 
-						<div class="bg-img bg-img-1"></div>
+					        foreach ($result as  $image)
+					        {
+					        	//echo "<pre>"; print_r($image['slider_photo']);
+					        	?>
+					   <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+
+						<div class="bg-img" style="background-image: url(<?= RES_URL;?>images/user_images/<?= $image['slider_photo'] ?>);"></div>
 
 						<div class="slide-caption">
                             <div class="caption-content">
@@ -77,41 +83,12 @@
                         </div>
 						
 					</div>
-					
-					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-					
-						<div class="bg-img bg-img-2"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>BLUE Onepage HTML5 Template</h2>
-                                <span>Clean and Professional one page Template</span>
-                                <a href="#" class="btn btn-blue btn-effect">Join US</a>
-                            </div>
-                        </div>
+					       <?php     
+					        }
+					        ?>                        
 						
 					</div>
-					
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-						
-						<div class="bg-img bg-img-3"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>BLUE Onepage HTML5 Template</h2>
-                                <span>Clean and Professional one page Template</span>
-                                <a href="#" class="btn btn-blue btn-effect">Join US</a>
-                            </div>
-                        </div>
-
-					</div>
-
 				</div><!-- /sl-slider -->
-
-                <!-- 
-                <nav id="nav-arrows" class="nav-arrows">
-                    <span class="nav-arrow-prev">Previous</span>
-                    <span class="nav-arrow-next">Next</span>
-                </nav>
-                -->
                 
                 <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
                     <a href="javascript:;" class="sl-prev">
@@ -160,7 +137,7 @@
 							<div class="welcome-block">
 								<h3>Welcome To Our Site</h3>								
 						     	 <div class="message-body">
-									<img src="img/member-1.jpg" class="pull-left" alt="member">
+									<img src="<?=RES_URL?>client/img/member-1.jpg" class="pull-left" alt="member">
 						       		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 						     	 </div>
 						       	<a href="#" class="btn btn-border btn-effect pull-right">Read More</a>
@@ -241,73 +218,73 @@
 
 						<ul class="project-wrapper wow animated fadeInUp">
 							<li class="portfolio-item">
-								<img src="img/portfolio/item.jpg" class="img-responsive" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
+								<img src="<?=RES_URL?>client/img/portfolio/item.jpg" class="img-responsive" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="img/portfolio/item.jpg"><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="<?=RES_URL?>client/img/portfolio/item.jpg"><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
 							
 							<li class="portfolio-item">
-								<img src="img/portfolio/item2.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="<?=RES_URL?>client/img/portfolio/item2.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street" href="img/slider/banner.jpg" data-fancybox-group="works" ><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Wall street" href="<?=RES_URL?>client/img/slider/banner.jpg" data-fancybox-group="works" ><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
 							
 							<li class="portfolio-item">
-								<img src="img/portfolio/item3.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="<?=RES_URL?>client/img/portfolio/item3.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="img/portfolio/item3.jpg"><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="<?=RES_URL?>client/img/portfolio/item3.jpg"><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
 							
 							<li class="portfolio-item">
-								<img src="img/portfolio/item4.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
+								<img src="<?=RES_URL?>client/img/portfolio/item4.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="img/portfolio/item4.jpg"><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="<?=RES_URL?>client/img/portfolio/item4.jpg"><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
 							
 							<li class="portfolio-item">
-								<img src="img/portfolio/item5.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="<?=RES_URL?>client/img/portfolio/item5.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="img/portfolio/item5.jpg"><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="<?=RES_URL?>client/img/portfolio/item5.jpg"><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
 							
 							<li class="portfolio-item">
-								<img src="img/portfolio/item6.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="<?=RES_URL?>client/img/portfolio/item6.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
 								<figcaption class="mask">
 									<h3>Wall street</h3>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="img/portfolio/item6.jpg"><i class="fa fa-search"></i></a></li>
+									<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="<?=RES_URL?>client/img/portfolio/item6.jpg"><i class="fa fa-search"></i></a></li>
 									<li><a href=""><i class="fa fa-link"></i></a></li>
 								</ul>
 							</li>
@@ -330,21 +307,21 @@
 							
 							<div id="testimonial" class=" wow animated fadeInUp">
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
+									<img src="<?=RES_URL?>client/img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
 										<span>Katty Flower</span>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 									</div>
 								</div>
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
+									<img src="<?=RES_URL?>client/img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
 										<span>Katty Flower</span>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 									</div>
 								</div>
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
+									<img src="<?=RES_URL?>client/img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
 										<span>Katty Flower</span>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>

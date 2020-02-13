@@ -39,8 +39,9 @@
         <link rel="stylesheet" href="<?=RES_URL;?>client/css/main.css">
         <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
 		<!-- Modernizer Script for old Browsers -->
-        <script src="<?=RES_URL;?>client/js/modernizr-2.6.2.min.js"></script>
-
+        <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+        <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 	
     <body id="body">
@@ -52,45 +53,3 @@
             </div>
 		</div>
 		<!-- end preloader -->
-
-        <!--
-        Fixed Navigation
-        ==================================== -->
-        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-                    </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-					<h1 class="navbar-brand">
-						<a href="#body">Auditions</a>
-					</h1>
-					<!-- /logo -->
-                </div>
-
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body">Home</a></li>
-                        <li><a href="#portfolio">portfolio</a></li>
-                        <li><a href="#testimonials">Testimonial</a></li>
-                        <li><a href="#price">price</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <ul class="p-0 nav navbar-nav">
-                        <li><a target="_blank" href="<?=site_url('site/reg')?>">Registration</a></li>
-                    </ul>
-                </nav>
-				<!-- /main nav -->
-				
-            </div>
-
-
-        </header>

@@ -65,6 +65,7 @@
 									<tr>
 										<th>Sliders</th>
 										<th>#</th>
+										<th>#</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -123,6 +124,32 @@
 			});
 		});
 	});
+
+	$(document).on('click', '.btn-edit', function(e) {
+		e.preventDefault();
+		var id = $(this).attr('data-id');
+			$.ajax({
+				url: "<?= site_url('era/slider/delete_slider') ?>",
+				type: 'post',
+				dataType: 'json',
+				data: ('id',id),
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$(".preload").attr('style', 'display:block');
+				},
+				success: function(data) {
+					console.log(data);
+					id = null;
+					$('#data-table-cat').DataTable().ajax.reload();
+					$(".preload").attr('style', 'display:none');
+				},
+				error: function() {
+					console.log('error');
+				}
+			});
+		});
+
 	$('#add_slider').on('submit', function(e) {
 		e.preventDefault();
 		var form = $('#add_slider');

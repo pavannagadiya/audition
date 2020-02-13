@@ -20,11 +20,13 @@ class Site extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->template('client/index');
+		$this->load->model("slider_model");
+		$data['result'] = $this->slider_model->get_all_slides();
+		$this->load->template('client/index',$data);
 	}
 
 	public function reg()
 	{
-		$this->load->template('client/reg');
+		$this->load->template_reg('client/reg');
 	}
 }

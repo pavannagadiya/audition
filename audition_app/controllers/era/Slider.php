@@ -65,6 +65,24 @@ class Slider extends Audi_Controller
         }
         $this->response($response, REST_Controller::HTTP_OK);
     }
+    public function delete_slider_post()
+	{
+        $id = $this->post('id');
+        print_r($id);die;
+        $result = $this->slider_model->delete_slides($id);
+        if (!empty($result)) {
+            $response = [
+                'status' => true,
+                'data' => 'Slider Deleted!!!',
+            ];
+        } else {
+            $response = [
+                'status' => false,
+                'message' => 'Something want wrong !!!',
+            ];
+        }
+        $this->response($response, REST_Controller::HTTP_OK);
+	}
     public function do_upload()
     {
         $config['upload_path'] = "./audition_asset/images/slider_images/"; //pathe where uploaded image store

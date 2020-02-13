@@ -28,7 +28,7 @@
 		<div class="menu">
 			<ul class="list">
 				<li class="header">NAVIGATION</li>
-				<li class="active">
+				<li class="">
 					<a href=<?= site_url("admin/admin/index") ?>>
 						<i class="material-icons">home</i>
 						<span>Home</span>
@@ -46,13 +46,13 @@
 						<span>Slider</span>
 					</a>
 				</li>
-				<li>
+				<!--<li>
 					<a href="pages/helper-classes.html">
 						<i class="material-icons">layers</i>
 						<span>Helper Classes</span>
 					</a>
 				</li>
-				<li>
+				 <li>
 					<a href="javascript:void(0);" class="menu-toggle">
 						<i class="material-icons">widgets</i>
 						<span>Widgets</span>
@@ -368,7 +368,7 @@
 						<i class="material-icons col-light-blue">donut_large</i>
 						<span>Information</span>
 					</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<!-- #Menu -->

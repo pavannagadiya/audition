@@ -30,4 +30,20 @@ class Slider_model extends CI_Model
 			->result_array();
 		return $users;
 	}
+	public function delete_slides($id)
+	{
+        $this->db->select('slider_photo');
+		$this->db->where('id', $id);
+        $slider_name = $this->db->get('audition_slider')->row_array();
+        if ($slider_name) {
+            @unlink('./audition_asset/images/slider_images/' . $slider_name['slider_photo']);
+
+            $this->db->where('id', $id)
+                ->delete('audition_slider');
+            $result = $this->db->affected_rows();
+            return $result;
+        } else {
+            return;
+        }
+	}
 }

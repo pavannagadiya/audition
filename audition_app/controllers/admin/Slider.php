@@ -20,7 +20,8 @@ class Slider extends CI_Controller
 			->unset_column('id')
 			->unset_column('slider_photo')
 			->add_column('Sliders', '$1', 'callback_slider_image(slider_photo)')
-			->add_column('Change', '$1', 'callback_slider_change(id)');
+			->add_column('Change', '$1', 'callback_slider_change(id)')
+			->add_column('Delete', '$1', 'callback_slider_delete(id)');
 		echo $this->datatables->generate();
 	}
 }
