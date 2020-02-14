@@ -33,7 +33,7 @@ this method for create new user in db */
                 $data['user_name'] = $this->post('user_name');
 
                 $result = $this->user_model->create_user($data);
-                $user_image = $this->product_image_post($result);
+                $user_image = $this->user_image_post($result);
                 if (empty($user_image['status'])) {
                     $response = [
                         'status' => false,
@@ -81,7 +81,7 @@ this method for create new user in db */
         $this->response($response, REST_Controller::HTTP_OK);
     }
 
-    public function product_image_post($id)
+    public function user_image_post($id)
     {
         /* print_r($id);die; */
             $this->load->library('upload');
@@ -102,7 +102,7 @@ this method for create new user in db */
                 $images[] = $dataInfo['file_name'];
 
                 $data['user_id'] = $id;
-                $data['user_photo'] = $dataInfo['file_name'];
+				$data['user_photo'] = $dataInfo['file_name'];
 
                 $data['img_istitle'] = 0;
                 if ($i == 0) {
@@ -114,8 +114,8 @@ this method for create new user in db */
                 $extension = end($str_arr); /* get last extension */
                 /* split image name */
 
-                /* check image extension */
-                if ($extension == 'gif' || $str_arr[1] == 'jpg' || $str_arr[1] == 'png' || $str_arr[1] == 'jpeg') {
+				/* check image extension */
+                if ($str_arr[1] == 'gif' || $str_arr[1] == 'jpg' || $str_arr[1] == 'png' || $str_arr[1] == 'jpeg') {
                     $result = $this->user_model->user_image($data);
                 } else {
                     return false;

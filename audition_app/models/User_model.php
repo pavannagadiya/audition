@@ -14,8 +14,7 @@ class User_model extends CI_Model
 
     public function create_user($data)
     {
-        $this->db->insert('user_registration', $data)
-        ->from('user_registration');
+        $this->db->insert('user_registration', $data);
         return $this->db->insert_id();
     }
     public function get_all_participants()
