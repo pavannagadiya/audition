@@ -67,8 +67,7 @@ class Slider extends Audi_Controller
     }
     public function delete_slider_post()
 	{
-        $id = $this->post('id');
-        print_r($id);die;
+		$id = $this->post('id');
         $result = $this->slider_model->delete_slides($id);
         if (!empty($result)) {
             $response = [

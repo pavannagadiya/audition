@@ -36,13 +36,13 @@
 				</li>
 				<li>
 					<a href=<?= site_url("admin/participants/load_participants") ?>>
-						<i class="material-icons">home</i>
+						<i class="material-icons">group</i>
 						<span>Participants</span>
 					</a>
 				</li>
 				<li>
 					<a href=<?= site_url("admin/slider/load_slider_images") ?>>
-						<i class="material-icons">text_fields</i>
+						<i class="material-icons">layers</i>
 						<span>Slider</span>
 					</a>
 				</li>

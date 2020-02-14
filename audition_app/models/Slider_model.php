@@ -43,7 +43,7 @@ class Slider_model extends CI_Model
             $result = $this->db->affected_rows();
             return $result;
         } else {
-            return;
+            return false;
         }
 	}
 }
