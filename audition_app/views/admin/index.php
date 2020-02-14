@@ -39,6 +39,7 @@ img{
             </div>
             <!-- #END# Widgets -->
             <div>
+				<h1>LOGO</h1>
                 <!-- <img src="<?=RES_URL?>/admin/logo.png"  alt="" srcset=""> -->
             </div>
         </div>

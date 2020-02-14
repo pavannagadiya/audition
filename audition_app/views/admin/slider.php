@@ -64,8 +64,8 @@
 								<thead>
 									<tr>
 										<th>Sliders</th>
-										<th>Change</th>
-										<th>Delete</th>
+										<th class="data-table-width">Change</th>
+										<th class="data-table-width">Delete</th>
 									</tr>
 								</thead>
 								<tbody>
