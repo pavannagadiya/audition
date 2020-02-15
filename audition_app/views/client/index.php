@@ -1,4 +1,4 @@
-		<div class="modal fade" id="myModal" role="dialog">
+<!-- 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -34,10 +34,10 @@
 									<label for="user_image[]"><b>Image Upload</b></label>
 									<input type="file" name="user_image[]" required multiple="multiple">
 								</div>
-								<!-- <div class="col-sm-6 ">
+								 <div class="col-sm-6 ">
                                          <label for="uname"><b>State</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required class="form-control">   
-                                        </div> -->
+                                        </div> 
 							</div>
 
 						</div>
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 		</div>
-		</div>
+		</div> -->
 
 		<main class="site-content" role="main">
 
@@ -68,17 +68,17 @@
 						foreach ($result as  $image) {
 							//echo "<pre>"; print_r($image['slider_photo']);
 						?>
-							<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+							<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" style="display: none;" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
 
 								<div class="bg-img" style="background-image: url(<?= RES_URL; ?>images/slider_images/<?= $image['slider_photo'] ?>);"></div>
 
-								<div class="slide-caption">
+								<!-- <div class="slide-caption">
 									<div class="caption-content">
 										<h2 class="animated fadeInDown">BLUE Onepage HTML5 Template</h2>
 										<span class="animated fadeInDown">Clean and Professional one page Template</span>
 										<a href="#" class="btn btn-blue btn-effect">Join US</a>
 									</div>
-								</div>
+								</div> -->
 
 							</div>
 						<?php
@@ -343,9 +343,10 @@
 							<p>Our price for your company</p>
 						</div>
 
-						<div class="col-md-4 wow animated fadeInUp">
+						<div class="col-md-3 wow animated fadeInUp">
 							<div class="price-table text-center">
-								<span>Silver</span>
+								<img src="<?= RES_URL; ?>client/img/price-section/1.jpeg" class="price-section-image" alt="sorry">
+								<!-- <span>Silver</span>
 								<div class="value">
 									<span>$</span>
 									<span>24,35</span><br>
@@ -357,11 +358,65 @@
 									<li>No Bonus Points</li>
 									<li>No Bonus Points</li>
 									<li><a href="#">sign up</a></li>
-								</ul>
+								</ul> -->
+							</div>
+						</div>
+						<div class="col-md-3 wow animated fadeInUp">
+							<div class="price-table text-center">
+								<img src="<?= RES_URL; ?>client/img/price-section/2.jpeg" class="price-section-image" alt="sorry">
+								<!-- <span>Silver</span>
+								<div class="value">
+									<span>$</span>
+									<span>24,35</span><br>
+									<span>month</span>
+								</div>
+								<ul>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li><a href="#">sign up</a></li>
+								</ul> -->
+							</div>
+						</div>
+						<div class="col-md-3 wow animated fadeInUp">
+							<div class="price-table text-center">
+								<img src="<?= RES_URL; ?>client/img/price-section/3.jpeg" class="price-section-image" alt="sorry">
+								<!-- <span>Silver</span>
+								<div class="value">
+									<span>$</span>
+									<span>24,35</span><br>
+									<span>month</span>
+								</div>
+								<ul>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li><a href="#">sign up</a></li>
+								</ul> -->
+							</div>
+						</div>
+						<div class="col-md-3 wow animated fadeInUp">
+							<div class="price-table text-center">
+								<img src="<?= RES_URL; ?>client/img/price-section/4.jpeg" class="price-section-image" alt="sorry">
+								<!-- <span>Silver</span>
+								<div class="value">
+									<span>$</span>
+									<span>24,35</span><br>
+									<span>month</span>
+								</div>
+								<ul>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li>No Bonus Points</li>
+									<li><a href="#">sign up</a></li>
+								</ul> -->
 							</div>
 						</div>
 
-						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
+						<!-- <div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
 							<div class="price-table featured text-center">
 								<span>Gold</span>
 								<div class="value">
@@ -377,9 +432,9 @@
 									<li><a href="#">sign up</a></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 
-						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
+						<!-- <div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
 							<div class="price-table text-center">
 								<span>Diamond</span>
 								<div class="value">
@@ -395,7 +450,7 @@
 									<li><a href="#">sign up</a></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>

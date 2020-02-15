@@ -8222,5 +8222,8 @@ html.ie11 .bs-searchbox .form-control {
   width: 90%; }
 
 .data-table-width{
-	width:60px;
+  width:60px !important;
+}
+.clickable{
+  cursor: pointer !important;
 }

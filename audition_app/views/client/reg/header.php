@@ -37,6 +37,8 @@
         <link rel="stylesheet" href="<?=RES_URL;?>client/css/animate.css">
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="<?=RES_URL;?>client/css/main.css">
+
+        <link rel="stylesheet" href="<?= RES_URL; ?>client/css/customstyle.css">
         <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
 		<!-- Modernizer Script for old Browsers -->
         <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
