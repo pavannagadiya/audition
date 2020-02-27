@@ -1,7 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Site extends CI_Controller {
+use Razorpay\Api\Api as RazorpayApi;
+use Razorpay\Api\Errors\SignatureVerificationError;
+
+class Site extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -22,11 +26,24 @@ class Site extends CI_Controller {
 	{
 		$this->load->model("slider_model");
 		$data['result'] = $this->slider_model->get_all_slides();
-		$this->load->template('client/index',$data);
+		$this->load->template('client/index', $data);
+		//echo "<pre>";	print_r($data); exit();
 	}
 
 	public function reg()
 	{
 		$this->load->template_reg('client/reg');
+	}
+	public function razorPaySuccess()
+	{
+		$data = [
+			'payment_id' => $this->input->post('razorpay_payment_id'),
+			'amount' => $this->input->post('totalAmount')
+		];
+		$api = new RazorpayApi(RZP_KEY_ID, RZP_KEY_SECRET);
+		$payment  = $api->payment->fetch($data['payment_id']);
+		$payment->capture(array('amount' => ($data['totalAmount'] * 100)));
+		print_r($payment);
+		return true;
 	}
 }

@@ -85,3 +85,6 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 defined('JWT_KEY')      or define('JWT_KEY', 'test'); // highest automatically-assigned error code
+
+define('RZP_KEY_ID','rzp_test_ru7yQNn39E9B3J');
+define('RZP_KEY_SECRET','31alFkx7155ogxqpy6ZApMXS');

@@ -65,20 +65,33 @@
 						<?php
 						$count = 0;
 
-						foreach ($result as  $image) {
-							//echo "<pre>"; print_r($image['slider_photo']);
+						foreach ($result as $key=>$image) {
+							//echo "<pre>"; print_r($key);
 						?>
+						
 							<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" style="display: none;" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
 
-								<div class="bg-img" style="background-image: url(<?= RES_URL; ?>images/slider_images/<?= $image['slider_photo'] ?>);"></div>
+								 <div class="bg-img" style="background-image: url(<?= RES_URL; ?>images/slider_images/<?= $image['slider_photo'] ?>);"></div>
 
-								<!-- <div class="slide-caption">
+								<?php if ($key%2==0): ?>
+							
+						
+								<div class="slide-caption" style="padding-right: 50%;">
 									<div class="caption-content">
-										<h2 class="animated fadeInDown">BLUE Onepage HTML5 Template</h2>
-										<span class="animated fadeInDown">Clean and Professional one page Template</span>
-										<a href="#" class="btn btn-blue btn-effect">Join US</a>
+										<h2 class="animated fadeInDown"><?php echo $image['slider_title']; ?></h2>
+										
+										<a href="<?php echo $image['slider_url']; ?>" class="btn btn-blue " style="border-radius: 30px;  background: linear-gradient(90deg, rgb(211, 59, 75) 0%, rgb(250, 150, 28) 100%);"><?php echo $image['slider_button_name']; ?></a>
 									</div>
-								</div> -->
+								</div>
+								<?php else : ?>
+									<div class="slide-caption" style="padding-left: 50%;">
+									<div class="caption-content">
+										<h2 class="animated fadeInDown"><?php echo $image['slider_title']; ?></h2>
+										
+										<a href="<?php echo $image['slider_url']; ?>" class="btn btn-blue " style="border-radius: 30px;  background: linear-gradient(90deg, rgb(211, 59, 75) 0%, rgb(250, 150, 28) 100%); "><?php echo $image['slider_button_name'];?></a>
+									</div>
+								</div>
+								<?php endif ?>
 
 							</div>
 						<?php
@@ -88,11 +101,13 @@
 					</div>
 				</div><!-- /sl-slider -->
 
-				<nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-					<a href="javascript:;" class="sl-prev">
+				<nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg" >
+					<a href="javascript:;" class="sl-prev" style="border-radius: 50% !important;
+    background-color: #2f2f2f45 !important;">
 						<i class="fa fa-angle-left fa-3x"></i>
 					</a>
-					<a href="javascript:;" class="sl-next">
+					<a href="javascript:;" class="sl-next" style="border-radius: 50% !important;
+    background-color: #2f2f2f45 !important;">
 						<i class="fa fa-angle-right fa-3x"></i>
 					</a>
 				</nav>
@@ -112,30 +127,17 @@
         ==================================== -->
 
 			<!-- about section -->
-			<section id="about">
+<!-- 			<section id="social">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 wow animated fadeInLeft">
-							<div class="recent-works">
-								<h3>Recent Works</h3>
-								<div id="works">
-									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-									</div>
-									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-									</div>
-									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 						<div class="col-md-7 col-md-offset-1 wow animated fadeInRight">
 							<div class="welcome-block">
 								<h3>Welcome To Our Site</h3>
 								<div class="message-body">
-									<img src="<?= RES_URL ?>client/img/member-1.jpg" class="pull-left" alt="member">
+									
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 								</div>
 								<a href="#" class="btn btn-border btn-effect pull-right">Read More</a>
@@ -143,9 +145,53 @@
 						</div>
 					</div>
 				</div>
+			</section> -->
+			<section id="about-us">
+				<div class="container">
+					<div class="row">
+
+						<div class="sec-title text-center">
+							<h2 class="wow animated bounceInLeft">GUJARAT NO MODEL</h2>
+							<p class="wow animated bounceInRight">The Key Features of our Job</p>
+						</div>
+
+						<div class="col-md-6 col-sm-6 col-xs-12 text-center wow animated zoomIn">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+
+						<div class="col-md-6 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
+							<img src="<?= RES_URL ?>client/img/portfolio/item.jpg">
+						</div>
+
+						
+
+					</div>
+				</div>
 			</section>
 			<!-- end about section -->
+			<section id="social" class="parallax">
+				<div class="overlay">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 wow animated fadeInLeft">
+							
+						</div>
+						<div class="col-md-7 col-md-offset-1 wow animated fadeInRight">
+							<div class="welcome-block">
+								<h3 style="color: black;">Welcome To Our Site</h3>
+								<div class="message-body">
+									
+									<p style="color: white; margin-bottom: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+								<a href="#" class="btn btn-border btn-effect pull-right">Read More</a>
+							</div>
+						</div>
+						
 
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<!-- Service section -->
 			<section id="service">
@@ -458,7 +504,7 @@
 			<!-- end Price section -->
 
 			<!-- Social section -->
-			<section id="social" class="parallax">
+			<!-- <section id="social" class="parallax">
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
@@ -477,7 +523,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- end Social section -->
 
 			<!-- Contact section -->
