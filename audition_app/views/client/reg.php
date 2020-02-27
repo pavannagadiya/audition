@@ -138,7 +138,7 @@
 					var totalAmount = 200;
 					// var product_id = $(this).attr("data-id");
 					var options = {
-						"key": "rzp_test_ru7yQNn39E9B3J",
+						"key": "<?= RZP_KEY_ID; ?>",
 						"amount": (20 * 1000), // 2000 paise = INR 20
 						"name": "Test",
 						"description": "Payment",

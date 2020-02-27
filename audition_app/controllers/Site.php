@@ -42,7 +42,7 @@ class Site extends CI_Controller
 		];
 		$api = new RazorpayApi(RZP_KEY_ID, RZP_KEY_SECRET);
 		$payment  = $api->payment->fetch($data['payment_id']);
-		$payment->capture(array('amount' => ($data['totalAmount'] * 100)));
+		$payment->capture(array('amount' => ($data['amount'] * 100)));
 		print_r($payment);
 		return true;
 	}
