@@ -93,23 +93,10 @@
 					</form>
 				</div>
 
-				<!-- <div class="col-md- wow animated fadeInRight">
-									<address class="contact-details">
-										<h3>Contact Us</h3>						
-										<p><i class="fa fa-pencil"></i>Phoenix Inc.<span>PO Box 345678</span> <span>Little Lonsdale St, Melbourne </span><span>Australia</span></p><br>
-										<p><i class="fa fa-phone"></i>Phone: (415) 124-5678 </p>
-										<p><i class="fa fa-envelope"></i>website@yourname.com</p>
-									</address>
-								</div> -->
-
 			</div>
 		</div>
 	</section>
 	<!-- end Contact section -->
-
-	<!-- <section id="google-map">
-						<div id="map-canvas" class="wow animated fadeInUp"></div>
-					</section> -->
 
 </main>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>

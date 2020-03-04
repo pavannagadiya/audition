@@ -25,6 +25,26 @@
 											<label for="slider_photo"><b>Upload Slider</b></label>
 											<input type="file" name="slider_photo" required>
 										</div>
+										<div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="slider_title" value="<?=$slider_title?>" required>
+                                        <label class="form-label">Title</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="slider_url" value="<?=$slider_url?>" required>
+                                        <label class="form-label">Link URL</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="slider_button_name" value="<?=$slider_button_name?>" required>
+                                        <label class="form-label">Button</label>
+                                    </div>
+                                </div>
 										<div class="modal-footer">
 											<button type="submit" class="btn btn-primary">Submit</button>
 											<button type="reset" class="btn btn-danger">Reset</button>

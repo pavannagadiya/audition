@@ -40,8 +40,6 @@
     <link rel="stylesheet" href="<?= RES_URL; ?>client/css/animate.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="<?= RES_URL; ?>client/css/main.css">
-    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-    <!-- Modernizer Script for old Browsers -->
      <link rel="stylesheet" href="<?= RES_URL; ?>client/css/customstyle.css">
     <script src="<?= RES_URL; ?>client/js/modernizr-2.6.2.min.js"></script>
 </head>

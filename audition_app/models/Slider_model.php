@@ -46,4 +46,18 @@ class Slider_model extends CI_Model
             return false;
         }
 	}
+	public function button_data($id){
+		$data = $this->db->select('*')
+			->from('audition_slider')
+			->where('id', $id)
+			->get()
+			->row_array();
+		return $data;
+	}
+	public function update_button_data($id,$data){
+		$query = $this->db->select('*')
+            ->where('id', $id)
+            ->update('audition_slider', $data);
+        return $query;
+	}
 }

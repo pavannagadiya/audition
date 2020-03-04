@@ -1,57 +1,3 @@
-<!-- 		<div class="modal fade" id="myModal" role="dialog">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Registrations</h4>
-					</div>
-					<form id="reg">
-						<div class="modal-body">
-							<div class="form-group row">
-								<div class="col-lg-6">
-									<label for="user_name"><b>Full Name</b></label>
-									<input type="text" placeholder="Enter Username" name="user_name" required class="form-control">
-								</div>
-								<div class="col-sm-6 ">
-									<label for="user_email"><b>Contact Email</b></label>
-									<input type="text" placeholder="Enter Username" name="user_email" required class="form-control">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<div class="col-lg-6">
-									<label for="user_contact"><b>Contact Number</b></label>
-									<input type="text" placeholder="Enter Username" name="user_contact" required class="form-control">
-								</div>
-								<div class="col-sm-6 ">
-									<label for="user_state"><b>State</b></label>
-									<input type="text" placeholder="Enter Username" name="user_state" required class="form-control">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<div class="col-lg-6">
-									<label for="user_image[]"><b>Image Upload</b></label>
-									<input type="file" name="user_image[]" required multiple="multiple">
-								</div>
-								 <div class="col-sm-6 ">
-                                         <label for="uname"><b>State</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required class="form-control">   
-                                        </div> 
-							</div>
-
-						</div>
-
-						<div class="modal-footer">
-							<button type="reset" class="btn btn-primary">Reset</button>
-							<button type="submit" class="btn btn-success">Submit</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		</div> -->
-
 		<main class="site-content" role="main">
 
 			<!--
@@ -66,7 +12,6 @@
 						$count = 0;
 
 						foreach ($result as $key=>$image) {
-							//echo "<pre>"; print_r($key);
 						?>
 						
 							<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" style="display: none;" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
@@ -126,26 +71,6 @@
         End Home SliderEnd
         ==================================== -->
 
-			<!-- about section -->
-<!-- 			<section id="social">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 wow animated fadeInLeft">
-							
-						</div>
-						<div class="col-md-7 col-md-offset-1 wow animated fadeInRight">
-							<div class="welcome-block">
-								<h3>Welcome To Our Site</h3>
-								<div class="message-body">
-									
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-								</div>
-								<a href="#" class="btn btn-border btn-effect pull-right">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
 			<section id="about-us">
 				<div class="container">
 					<div class="row">
@@ -410,121 +335,22 @@
 						<div class="col-md-3 wow animated fadeInUp">
 							<div class="price-table text-center">
 								<img src="<?= RES_URL; ?>client/img/price-section/2.jpeg" class="price-section-image" alt="sorry">
-								<!-- <span>Silver</span>
-								<div class="value">
-									<span>$</span>
-									<span>24,35</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li><a href="#">sign up</a></li>
-								</ul> -->
 							</div>
 						</div>
 						<div class="col-md-3 wow animated fadeInUp">
 							<div class="price-table text-center">
 								<img src="<?= RES_URL; ?>client/img/price-section/3.jpeg" class="price-section-image" alt="sorry">
-								<!-- <span>Silver</span>
-								<div class="value">
-									<span>$</span>
-									<span>24,35</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li><a href="#">sign up</a></li>
-								</ul> -->
 							</div>
 						</div>
 						<div class="col-md-3 wow animated fadeInUp">
 							<div class="price-table text-center">
 								<img src="<?= RES_URL; ?>client/img/price-section/4.jpeg" class="price-section-image" alt="sorry">
-								<!-- <span>Silver</span>
-								<div class="value">
-									<span>$</span>
-									<span>24,35</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li><a href="#">sign up</a></li>
-								</ul> -->
 							</div>
 						</div>
-
-						<!-- <div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
-							<div class="price-table featured text-center">
-								<span>Gold</span>
-								<div class="value">
-									<span>$</span>
-									<span>50,00</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li><a href="#">sign up</a></li>
-								</ul>
-							</div>
-						</div> -->
-
-						<!-- <div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
-							<div class="price-table text-center">
-								<span>Diamond</span>
-								<div class="value">
-									<span>$</span>
-									<span>123,12</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li><a href="#">sign up</a></li>
-								</ul>
-							</div>
-						</div> -->
-
 					</div>
 				</div>
 			</section>
 			<!-- end Price section -->
-
-			<!-- Social section -->
-			<!-- <section id="social" class="parallax">
-				<div class="overlay">
-					<div class="container">
-						<div class="row">
-
-							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2>FOLLOW US</h2>
-								<p>Beautifully simple follow buttons to help you get followers on</p>
-							</div>
-
-							<ul class="social-button">
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
-							</ul>
-
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- end Social section -->
 
 			<!-- Contact section -->
 			<section id="contact">
