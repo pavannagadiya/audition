@@ -26,8 +26,7 @@ class Site extends CI_Controller
 	{
 		$this->load->model("slider_model");
 		$data['result'] = $this->slider_model->get_all_slides();
-		$this->load->template('client/index', $data);
-		//echo "<pre>";	print_r($data); exit();
+		$this->load->new_template('newClient/index',$data);
 	}
 
 	public function reg()
