@@ -14,6 +14,10 @@ class Slider extends Audi_Controller
     {
         $image = $this->do_upload(); //odther method call here for image upload
         $data['slider_photo'] = $image['file_name'];
+        $data['slider_title'] = $this->input->post('slider_title');
+        $data['slider_url'] = $this->input->post('slider_url');
+        $data['slider_button_name'] = $this->input->post('slider_button_name');
+
 
         $result = $this->slider_model->add_slider($data);
         if (!empty($result)) {

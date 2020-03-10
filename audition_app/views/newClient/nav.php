@@ -42,6 +42,9 @@
                 <li>
                   <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+                <li>
+                  <a class="page-scroll" target="_blank" href="<?= site_url('site/reg') ?>">Registraion</a>
+                </li>
               </ul>
             </div>
             <!-- navbar-collapse -->

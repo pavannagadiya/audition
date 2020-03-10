@@ -33,7 +33,7 @@
 
   <!-- Responsive Stylesheet File -->
   <link href="<?= RES_URL; ?>newClient/css/responsive.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
   <!-- =======================================================
     Theme Name: eBusiness
     Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/

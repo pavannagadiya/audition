@@ -8,9 +8,8 @@ class User extends Audi_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
-
     }
-/* ----------------------------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------------------------
 this method for create new user in db */
     public function create_user_post()
     {
@@ -31,6 +30,13 @@ this method for create new user in db */
                 $data['user_email'] = $this->post('user_email');
                 $data['user_state'] = $this->post('user_state');
                 $data['user_name'] = $this->post('user_name');
+                $data['user_categories'] = $this->post('user_categories');
+                $data['experience'] = $this->post('experience');
+                $data['qualification'] = $this->post('qualification');
+                $data['taluko'] = $this->post('taluko');
+                $data['district'] = $this->post('district');
+                $data['user_address'] = $this->post('user_address');
+
 
                 $result = $this->user_model->create_user($data);
                 $user_image = $this->user_image_post($result);
@@ -46,6 +52,7 @@ this method for create new user in db */
                     $response = [
                         'status' => true,
                         'message' => 'User create successful.',
+                        'id' => $result
                     ];
                 } else {
                     $response = [
@@ -84,54 +91,54 @@ this method for create new user in db */
     public function user_image_post($id)
     {
         /* print_r($id);die; */
-            $this->load->library('upload');
-            $dataInfo = array();
-            $files = $_FILES;
-            $cpt = count($_FILES['user_image']['name']);
-            $result = [];
-            for ($i = 0; $i < $cpt; $i++) {
-                $_FILES['userfile']['name'] = $files['user_image']['name'][$i];
-                $_FILES['userfile']['type'] = $files['user_image']['type'][$i];
-                $_FILES['userfile']['tmp_name'] = $files['user_image']['tmp_name'][$i];
-                $_FILES['userfile']['error'] = $files['user_image']['error'][$i];
-                $_FILES['userfile']['size'] = $files['user_image']['size'][$i];
+        $this->load->library('upload');
+        $dataInfo = array();
+        $files = $_FILES;
+        $cpt = count($_FILES['user_image']['name']);
+        $result = [];
+        for ($i = 0; $i < $cpt; $i++) {
+            $_FILES['userfile']['name'] = $files['user_image']['name'][$i];
+            $_FILES['userfile']['type'] = $files['user_image']['type'][$i];
+            $_FILES['userfile']['tmp_name'] = $files['user_image']['tmp_name'][$i];
+            $_FILES['userfile']['error'] = $files['user_image']['error'][$i];
+            $_FILES['userfile']['size'] = $files['user_image']['size'][$i];
 
-                $this->upload->initialize($this->set_upload_options());
-                $this->upload->do_upload();
-                $dataInfo = $this->upload->data();
-                $images[] = $dataInfo['file_name'];
+            $this->upload->initialize($this->set_upload_options());
+            $this->upload->do_upload();
+            $dataInfo = $this->upload->data();
+            $images[] = $dataInfo['file_name'];
 
-                $data['user_id'] = $id;
-				$data['user_photo'] = $dataInfo['file_name'];
+            $data['user_id'] = $id;
+            $data['user_photo'] = $dataInfo['file_name'];
 
-                $data['img_istitle'] = 0;
-                if ($i == 0) {
-                    $data['img_istitle'] = 1;
-                }
-
-                /* split image name */
-                $str_arr = explode(".", $data['user_photo']);
-                $extension = end($str_arr); /* get last extension */
-                /* split image name */
-
-				/* check image extension */
-                if ($str_arr[1] == 'gif' || $str_arr[1] == 'jpg' || $str_arr[1] == 'png' || $str_arr[1] == 'jpeg') {
-                    $result = $this->user_model->user_image($data);
-                } else {
-                    return false;
-                }
-                /* check image extension */
+            $data['img_istitle'] = 0;
+            if ($i == 0) {
+                $data['img_istitle'] = 1;
             }
 
-            if (!empty($result)) {
-                $data1['error'] = "success";
-                $data1['status'] = true;
-                return $data1;
+            /* split image name */
+            $str_arr = explode(".", $data['user_photo']);
+            $extension = end($str_arr); /* get last extension */
+            /* split image name */
+
+            /* check image extension */
+            if ($str_arr[1] == 'gif' || $str_arr[1] == 'jpg' || $str_arr[1] == 'png' || $str_arr[1] == 'jpeg') {
+                $result = $this->user_model->user_image($data);
             } else {
-                $data1['error'] = $this->upload->display_errors();
-                $data1['status'] = false;
-                return $data1;
+                return false;
             }
+            /* check image extension */
+        }
+
+        if (!empty($result)) {
+            $data1['error'] = "success";
+            $data1['status'] = true;
+            return $data1;
+        } else {
+            $data1['error'] = $this->upload->display_errors();
+            $data1['status'] = false;
+            return $data1;
+        }
     }
 
     private function set_upload_options()

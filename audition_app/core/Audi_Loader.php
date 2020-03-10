@@ -62,16 +62,16 @@ class Audi_Loader extends CI_Loader {
         $vars['current_action'] = $router->fetch_method();
         
         if($return):
-            $content  = $this->view('client/reg/header', $vars, $return);
-            //$content  = $this->view('client/reg/nav', $vars, $return);
+            $content  = $this->view('newClient/header', $vars, $return);
+            //$content  = $this->view('newClient/nav', $vars, $return);
             $content .= $this->view($template_name, $vars, $return);
-            $content .= $this->view('client/reg/footer', $vars, $return);
+            $content .= $this->view('newClient/footer', $vars, $return);
             return $content;
         else:
-            $this->view('client/reg/header', $vars);
-           // $this->view('client/reg/nav', $vars);
+            $this->view('newClient/header', $vars);
+           // $this->view('newClient/nav', $vars);
             $this->view($template_name, $vars);
-            $this->view('client/reg/footer', $vars);
+            $this->view('newClient/footer', $vars);
         endif;
     }
     public function new_template($template_name, $vars = array(), $return = FALSE)

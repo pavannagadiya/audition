@@ -2351,3 +2351,30 @@ span.email-notes {
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
+.reg-banner-name{
+   position: absolute;
+    margin-top: 25%;
+    padding-left: 10%;
+    color: white;
+}
+
+.reg-background{
+      background-color: #ebe8e8;
+}
+
+.reg-about{
+     background-color: white;
+}
+
+.inputshape{
+  border-radius: 25px !important;
+ border-color: gray !important;
+}
+.inputshape:focus{
+  border-color: blue !important;
+
+}
+
+.span-error{
+  color: red;
+}

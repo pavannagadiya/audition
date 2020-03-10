@@ -27,21 +27,21 @@
 										</div>
 										<div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="slider_title" value="<?=$slider_title?>" required>
+                                        <input type="text" class="form-control" name="slider_title" required>
                                         <label class="form-label">Title</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="slider_url" value="<?=$slider_url?>" required>
+                                        <input type="text" class="form-control" name="slider_url" required>
                                         <label class="form-label">Link URL</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="slider_button_name" value="<?=$slider_button_name?>" required>
+                                        <input type="text" name="slider_button_name" class="form-control" required>
                                         <label class="form-label">Button</label>
                                     </div>
                                 </div>
@@ -174,8 +174,12 @@
 		e.preventDefault();
 		var form = $('#add_slider');
 		var form_data = new FormData($(form)[0]);
-		console.log(form);
-
+		var slider_title = $("input[name='slider_title']").val();
+       	var slider_url = $("input[name='slider_url']").val();
+       	var slider_button_name = $("input[name='slider_button_name']").val();
+		form_data.append('slider_title', slider_title);
+		form_data.append('slider_url', slider_url);
+		form_data.append('slider_button_name', slider_button_name);
 		$.ajax({
 			url: "<?= site_url('era/slider/add_slider') ?>",
 			type: 'post',

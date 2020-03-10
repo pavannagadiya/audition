@@ -31,13 +31,14 @@ class Site extends CI_Controller
 
 	public function reg()
 	{
-		$this->load->template_reg('client/reg');
+		$this->load->template_reg('newClient/reg');
 	}
 	public function razorPaySuccess()
 	{
 		$data = [
 			'payment_id' => $this->input->post('razorpay_payment_id'),
-			'amount' => $this->input->post('totalAmount')
+			'amount' => $this->input->post('totalAmount'),
+			'id' => $this->input->post('user_id')
 		];
 		$api = new RazorpayApi(RZP_KEY_ID, RZP_KEY_SECRET);
 		$payment  = $api->payment->fetch($data['payment_id']);

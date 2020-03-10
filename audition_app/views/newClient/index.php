@@ -434,23 +434,79 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-3 col-sm-34 col-xs-12">
           <div class="pri_table_list">
-            <h3>basic <br/> <span>$80 / month</span></h3>
+            <!-- <h3>basic</h3> -->
             <ol>
-              <li class="check">Online system</li>
-              <li class="check cross">Full access</li>
-              <li class="check">Free apps</li>
-              <li class="check">Multiple slider</li>
-              <li class="check cross">Free domin</li>
-              <li class="check cross">Support unlimited</li>
-              <li class="check">Payment online</li>
-              <li class="check cross">Cash back</li>
+              <li>Whatsapp Marketing</li>
+              <li>Business Promoting Images</li>
+              <li>Bulk SMS</li>
+              <li>Bulk Voice Call</li>
+              <li>All Social Media Promotion</li>
+              <li>SEO (Promotion on Google)</li>
+              <li>Customized Web Development</li>
+              <li>Customized Software Development</li>
+              <li>Animation Video Advertisement</li>
+              <li>All Type Of Designing</li>
             </ol>
-            <button>sign up now</button>
+            <!-- <button>sign up now</button> -->
           </div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-3 col-sm-34 col-xs-12">
+          <div class="pri_table_list">
+            <!-- <h3>basic</h3> -->
+            <ol>
+              <li>Setup your website in Google Search Console</li>
+              <li>Index your website in google webmaster</li>
+              <li>Add 5 keyword in your website</li>
+              <li>Fix  website errors</li>
+              <li>Create & submit a sitemap in your website</li>
+              <li>Setup your website in google analytics</li>
+              <li>Find a page on your site that bring you most traffic</li>
+              <li>Identify other site related your site</li>
+              <li>Setup wordpress yoast plign in your website</li>
+              <li>Boost your entire website of contain post</li>
+              <li>Tag your keyword with popular keywords</li>
+              <li>Increase your website traffic</li>
+            </ol>
+            <!-- <button>sign up now</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-34 col-xs-12">
+          <div class="pri_table_list">
+            <!-- <h3>basic</h3> -->
+            <ol>
+              <li>Informational Website</li>
+              <li>Dynamic website</li>
+              <li>E-commerce website</li>
+              <li>Navigational website</li>
+              <li>Magazine website</li>
+              <li>Android App</li>
+              <li>E-commerce App</li>
+              <li>Customized App</li>
+            </ol>
+            <!-- <button>sign up now</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-34 col-xs-12">
+          <div class="pri_table_list">
+            <!-- <h3>basic</h3> -->
+            <ol>
+              <li>Animation Video</li>
+              <li>Product promotion video</li>
+              <li>Company information promotion video</li>
+              <li>Business promotion video</li>
+              <li>Customized promotion video</li>
+              <li>Makeing of youtube video</li>
+              <li>Promotion of youtube channel or videos</li>
+              <li>Promotion of companies/firms,apps,websites. etc</li>
+              <li>Rates are belongs to consepts and contains</li>
+              <li>Promotion of any product or service</li>
+            </ol>
+            <!-- <button>sign up now</button> -->
+          </div>
+        </div>
+        <!-- <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="pri_table_list active">
             <span class="saleon">top sale</span>
             <h3>standard <br/> <span>$110 / month</span></h3>
@@ -466,8 +522,8 @@
             </ol>
             <button>sign up now</button>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        </div> -->
+        <!-- <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="pri_table_list">
             <h3>premium <br/> <span>$150 / month</span></h3>
             <ol>
@@ -482,7 +538,7 @@
             </ol>
             <button>sign up now</button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -607,7 +663,8 @@
           <!-- Start Google Map -->
           <div class="col-md-6 col-sm-6 col-xs-12">
             <!-- Start Map -->
-            <iframe src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- <iframe src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7383.248241086219!2d70.747554!3d22.292224000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbd99e834015%3A0x693deeb01f9060e!2sGangotri%20Park!5e0!3m2!1sen!2sin!4v1583729038425!5m2!1sen!2sin" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
             <!-- End Map -->
           </div>
           <!-- End Google Map -->
