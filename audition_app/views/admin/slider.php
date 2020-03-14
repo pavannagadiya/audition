@@ -1,3 +1,8 @@
+<?php $user_info = $this->session->userdata('admin_info');
+if(empty($user_info)){
+    redirect('admin/index');
+}
+?>
 <section class="content">
 	<div class="container-fluid">
 		<!-- #END# Search Bar -->
@@ -23,25 +28,25 @@
 										</div>
 										<div class="modal-body">
 											<label for="slider_photo"><b>Upload Slider</b></label>
-											<input type="file" name="slider_photo" required>
+											<input type="file" name="slider_photo">
 										</div>
 										<div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="slider_title" required>
+                                        <input type="text" class="form-control" name="slider_title">
                                         <label class="form-label">Title</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="slider_url" required>
+                                        <input type="text" class="form-control" name="slider_url">
                                         <label class="form-label">Link URL</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" name="slider_button_name" class="form-control" required>
+                                        <input type="text" name="slider_button_name" class="form-control">
                                         <label class="form-label">Button</label>
                                     </div>
                                 </div>
@@ -78,7 +83,9 @@
 							</div>
 						</div>
 						<div class="table-responsive">
-							<button class="btn btn-primary add" data-toggle="modal" data-target="#slider_modal"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<div class="w-100 text-right">
+								<button class="btn btn-success add" data-toggle="modal" data-target="#slider_modal">Add</button>
+							</div>
 							<br>
 							<table id="data-table-cat" class="table table-bordered table-striped table-hover js-basic-example dataTable">
 								<thead>

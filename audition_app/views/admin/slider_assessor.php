@@ -1,3 +1,8 @@
+<?php $user_info = $this->session->userdata('admin_info');
+if(empty($user_info)){
+    redirect('admin/index');
+}
+?>
 <section class="content">
 	<div class="container-fluid">
 		<!-- #END# Search Bar -->

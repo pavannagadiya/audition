@@ -1,3 +1,8 @@
+<?php $user_info = $this->session->userdata('admin_info');
+if(empty($user_info)){
+    redirect('admin/index');
+}
+?>
 <section class="content">
 	<div class="container-fluid">
 		<!-- #END# Search Bar -->
@@ -12,7 +17,7 @@
 					</div>
 					<div class="body">
 						<div class="row clearfix">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 gallery">
+							<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 gallery">
 								<?php foreach ($user['images'] as $data) { ?>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 100px;width:100px;">
 										<a href="<?= RES_URL; ?>images/user_images/<?= $data['user_photo']; ?>">
@@ -21,7 +26,7 @@
 									</div>
 								<?php
 								}; ?>
-							</div>
+							</div> -->
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 								<table>
 									<tr>
@@ -39,6 +44,30 @@
 									<tr>
 										<td>State:</td>
 										<td><?= $user['user_state']; ?></td>
+									</tr>
+									<tr>
+										<td>Taluko:</td>
+										<td><?= $user['taluko']; ?></td>
+									</tr>
+									<tr>
+										<td>District:</td>
+										<td><?= $user['district']; ?></td>
+									</tr>
+									<tr>
+										<td>Qualification:</td>
+										<td><?= $user['qualification']; ?></td>
+									</tr>
+									<tr>
+										<td>Category:</td>
+										<td><?= $user['user_categories']; ?></td>
+									</tr>
+									<tr>
+										<td>Experience:</td>
+										<td><?= $user['experience']; ?></td>
+									</tr>
+									<tr>
+										<td>Address:</td>
+										<td><?= $user['user_address']; ?></td>
 									</tr>
 								</table>
 							</div>

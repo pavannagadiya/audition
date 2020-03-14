@@ -1,3 +1,8 @@
+<?php $user_info = $this->session->userdata('admin_info');
+if(empty($user_info)){
+    redirect('admin/index');
+}
+?>
 <section class="content">
     <div class="container-fluid">
         <!-- #END# Search Bar -->
@@ -19,7 +24,7 @@
                                         <th>Participants Name</th>
                                         <th>participants Email</th>
                                         <th>Participants State</th>
-                                        <th>Participants Photo</th>
+                                        <!-- <th>Participants Photo</th> -->
                                         <th>View</th>
                                     </tr>
                                 </thead>

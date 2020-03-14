@@ -27,7 +27,33 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->template_admin_login('admin/login');
+	}
+	public function home()
+	{
 		$data = $this->user_model->user_counts();
 		$this->load->template_admin('admin/index',$data);
 	}
+	public function check_login()
+    {
+        $name = $this->input->post('username');
+        $encryption = $this->input->post('password');
+        $pass =md5($encryption);
+
+        $check = $this->user_model->check_login($name, $pass);
+
+        if ($check) {
+            $this->session->set_userdata('admin_info', $check);
+            redirect('admin/home');
+        } else {
+            $this->session->set_flashdata('msg', 'Email or Password woring');
+            redirect('admin/index');
+        }
+
+	}
+	public function logout()
+    {
+        $this->session->unset_userdata('admin_info');
+        redirect('admin/index');
+    }
 }

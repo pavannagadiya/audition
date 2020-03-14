@@ -1,3 +1,9 @@
+<?php $user_info = $this->session->userdata('admin_info');
+if(empty($user_info)){
+    redirect('admin/index');
+}
+?>
+
 <section class="content">
         <div class="container-fluid">
             <!-- Basic Validation -->
@@ -35,7 +41,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-                                <a href="<?=site_url()?>admin/slider_assessor" class="btn btn-danger waves-effect" role="button">CANCEl</a>
+                                <a href="<?=site_url()?>admin/slider/slider_assessor" class="btn btn-danger waves-effect" role="button">CANCEl</a>
                             </form>
                         </div>
                     </div>

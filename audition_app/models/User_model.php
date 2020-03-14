@@ -30,11 +30,11 @@ class User_model extends CI_Model
         ->result_array();
         return $users; */
     }
-    public function user_image($data)
-    {
-        $query = $this->db->insert('user_photos', $data);
-        return $query;
-    }
+    // public function user_image($data)
+    // {
+    //     $query = $this->db->insert('user_photos', $data);
+    //     return $query;
+    // }
     public function user_counts()
     {
         $data['user'] = $this->db->select('*')
@@ -54,13 +54,24 @@ class User_model extends CI_Model
 
         $result = $query->row_array();
 
-        $query1 = $this->db->select('*')
+        /* $query1 = $this->db->select('*')
             ->from('user_photos')
             ->where('user_id', $result['id'])
-            ->get();
+            ->get(); */
 
-        $images = $query1->result_array();
-        $result['images'] = $images;
+        // $images = $query1->result_array();
+        // $result['images'] = $images;
+        return $result;
+    }
+
+    public function check_login($name, $pass)
+    {
+        $query = $this->db->select('*')
+            ->from('admin')
+            ->where('email', $name)
+            ->where('password', $pass)
+            ->get();
+        $result = $query->row_array();
         return $result;
     }
 }
