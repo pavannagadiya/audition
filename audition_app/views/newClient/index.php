@@ -52,6 +52,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center about-dhvani-font-weight">
+            <h4>હસીના ના ફુવારા સાથે એક રોમાંચક કહાની,</h4><br><h3>Bakka Ni Love Story</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-middle">
+            <div class="single-well text-left about-dhvani-font-weight">
+              <p>
+              Bollywood has made many movies of Love Story like Sanam Re, Dilwale Dulhania Le Jaayenge, Kuch Kuch Hota Hai, Veer Zaara, Dil Toh Pagal Hai, Maine Pyar Kiya. But we are coming with our new Gujarati Movie,Romantic and Suspense with a drama "Bakka Ni Love Story".
+              </p>
+              <P>
+              The Story Revolves Around a ROMANTIC Young and Enthusiastic Character Who Comes to City after a Disappointment and to Forget his Past love Story. And He Meets Someone to Make his life But Destiny Makes Something  which He don't Imagined. This Circumstances leads Him to Follow His Destiny for Which He is Not Sure. This Gujarati Movie Will Keep the Audience Entertained From Start Till end Because This Film is a Mixture of Suspense and Comedy with a Drama.
+              </P>
+            </div>
+          </div>
+        </div>
+        <!-- End col-->
+        <!-- single-well start-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-left">
+            <div class="single-well">
+              <a href="#">
+              <img src="<?= RES_URL; ?>newClient/img/Home-image.jpg" alt="">
+                </a>
+            </div>
+          </div>
+        </div>
+        <!-- single-well end-->
+      </div>
+    </div>
+  </div>
+  <!-- End About area -->
+
+  <!-- Start About area -->
+  <div id="about" class="about-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
             <h2>About DhvaniAddGroups</h2>
           </div>
@@ -71,7 +111,7 @@
         <!-- single-well end-->
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-middle">
-            <div class="single-well">
+            <div class="single-well" style="    text-align: left;">
               <a href="#">
                 <h4 class="sec-head">Social Marketer</h4>
               </a>
@@ -437,7 +477,7 @@
         <div class="col-md-3 col-sm-34 col-xs-12">
           <div class="pri_table_list">
             <!-- <h3>basic</h3> -->
-            <ol>
+            <ol class="p-0">
               <li>Whatsapp Marketing</li>
               <li>Business Promoting Images</li>
               <li>Bulk SMS</li>
@@ -446,8 +486,8 @@
               <li>SEO (Promotion on Google)</li>
               <li>Customized Web Development</li>
               <li>Customized Software Development</li>
-              <li>Animation Video Advertisement</li>
-              <li>All Type Of Designing</li>
+              <!-- <li>Animation Video Advertisement</li>
+              <li>All Type Of Designing</li> -->
             </ol>
             <!-- <button>sign up now</button> -->
           </div>
@@ -462,12 +502,12 @@
               <li>Fix  website errors</li>
               <li>Create & submit a sitemap in your website</li>
               <li>Setup your website in google analytics</li>
-              <li>Find a page on your site that bring you most traffic</li>
+              <!-- <li>Find a page on your site that bring you most traffic</li>
               <li>Identify other site related your site</li>
               <li>Setup wordpress yoast plign in your website</li>
               <li>Boost your entire website of contain post</li>
               <li>Tag your keyword with popular keywords</li>
-              <li>Increase your website traffic</li>
+              <li>Increase your website traffic</li> -->
             </ol>
             <!-- <button>sign up now</button> -->
           </div>
@@ -499,9 +539,9 @@
               <li>Customized promotion video</li>
               <li>Makeing of youtube video</li>
               <li>Promotion of youtube channel or videos</li>
-              <li>Promotion of companies/firms,apps,websites. etc</li>
+              <!-- <li>Promotion of companies/firms,apps,websites. etc</li>
               <li>Rates are belongs to consepts and contains</li>
-              <li>Promotion of any product or service</li>
+              <li>Promotion of any product or service</li> -->
             </ol>
             <!-- <button>sign up now</button> -->
           </div>
@@ -554,7 +594,7 @@
             <div class="testimonial-content text-center">
               <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
               <!-- start testimonial carousel -->
-              <div class="testimonial-carousel">
+              <!-- <div class="testimonial-carousel">
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
@@ -562,7 +602,7 @@
                     </p>
                     <h6>Boby</h6>
                   </div>
-                </div>
+                </div> -->
                 <!-- End single item -->
                 <div class="single-testi">
                   <div class="testi-text">
@@ -573,14 +613,14 @@
                   </div>
                 </div>
                 <!-- End single item -->
-                <div class="single-testi">
+                <!-- <div class="single-testi">
                   <div class="testi-text">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
                     </p>
                     <h6>Fleming</h6>
                   </div>
-                </div>
+                </div> -->
                 <!-- End single item -->
               </div>
             </div>
@@ -624,7 +664,7 @@
           <!-- Start contact icon column -->
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
-              <div class="single-icon">
+              <div class="single-icon" style="color:black;">
                 <i class="fa fa-mobile"></i>
                 <p>
                   Call: +91 99243 55507<br>
@@ -637,7 +677,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
-                <i class="fa fa-envelope-o"></i>
+                <i class="fa fa-envelope-o" style="color:black;"></i>
                 <p>
                   Email: dhvaniaddgroups@gmail.com<br>
                   <span>Web: www.dhvaniaddgroups.com</span>
@@ -649,7 +689,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-map-marker" style="color:black;"></i>
                 <p>
                   A5A Trimurti Tenaments Gangotri Park <br>
                   <span>University Road Rajkot 360005</span>

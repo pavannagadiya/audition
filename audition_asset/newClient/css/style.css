@@ -1294,7 +1294,7 @@ div#preloader {
 .pri_table_list ol {
   list-style: outside none none;
   margin: 0;
-  padding: 0 0 25px;
+  padding: 0 0 0 0;
 }
 
 .pri_table_list.active {
@@ -2377,4 +2377,18 @@ span.email-notes {
 
 .span-error{
   color: red;
+}
+
+.about-dhvani-font-weight h3{
+  font-weight: 700 !important;
+  color:#000;
+}
+.about-dhvani-font-weight h4{
+  font-weight: 700 !important;
+  color:#000;
+}
+.about-dhvani-font-weight p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  line-height: 31px;
 }
