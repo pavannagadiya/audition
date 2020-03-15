@@ -590,38 +590,19 @@
       <div class="container ">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <!-- Start testimonials Start -->
             <div class="testimonial-content text-center">
-              <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
-              <!-- start testimonial carousel -->
-              <!-- <div class="testimonial-carousel">
+              <!-- <a class="quate" href="#"><i class="fa fa-quote-right"></i></a> -->
+              <h2 class="register-now">REGISTER YOURSELF</h2>
                 <div class="single-testi">
                   <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                    <p class="register-now-detail">
+                    For the upcoming new gujarati  movie : “Bakka Ni Love Story" a cute love story. For which Auditions are now open.   It’s a golden chance to prove yourself and also to make a Grand career in the film industries. The selected from audition will be get a way of opportunity to become a rising star,  through the upcoming gujarati movie . Fill the your all personal details as like name, age, address, occupation and contact details. And don't forget to to fill the contact details which is very important,  to you and our official team who will contact you for further as soon.
                     </p>
-                    <h6>Boby</h6>
-                  </div>
-                </div> -->
-                <!-- End single item -->
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Jhon</h6>
+                    <br>
+                    <br>
+                    <a class="reg-buttono" target="_blank" href="<?= site_url('site/reg') ?>">Register Now</a>
                   </div>
                 </div>
-                <!-- End single item -->
-                <!-- <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Fleming</h6>
-                  </div>
-                </div> -->
-                <!-- End single item -->
               </div>
             </div>
             <!-- End testimonials end -->
