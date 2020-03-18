@@ -1,0 +1,33 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2020-03-17 16:38:53 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:39:05 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:39:10 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:39:25 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:40:17 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:40:48 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:41:09 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:41:30 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:43:53 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:44:18 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:45:18 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:46:05 --> 404 Page Not Found: Audition_asset/admin
+ERROR - 2020-03-17 16:46:08 --> 404 Page Not Found: admin/Admin/favicon.ico
+ERROR - 2020-03-17 16:46:16 --> 404 Page Not Found: Audition_asset/admin
+ERROR - 2020-03-17 16:46:18 --> 404 Page Not Found: admin/Slider/favicon.ico
+ERROR - 2020-03-17 16:46:56 --> 404 Page Not Found: Audition_asset/admin
+ERROR - 2020-03-17 16:46:59 --> 404 Page Not Found: admin/Slider/favicon.ico
+ERROR - 2020-03-17 16:47:28 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:47:52 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:48:14 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:50:28 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:53:28 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:53:41 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:54:07 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:54:45 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:55:22 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:57:03 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-17 16:58:38 --> 404 Page Not Found: Audition_asset/admin
+ERROR - 2020-03-17 16:58:41 --> 404 Page Not Found: admin/Admin/favicon.ico
+ERROR - 2020-03-17 16:58:43 --> 404 Page Not Found: Audition_asset/admin
+ERROR - 2020-03-17 16:58:45 --> 404 Page Not Found: admin/Slider/favicon.ico

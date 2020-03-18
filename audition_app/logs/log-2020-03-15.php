@@ -81,3 +81,5 @@ ERROR - 2020-03-15 11:25:19 --> 404 Page Not Found: Audition_asset/newClient
 ERROR - 2020-03-15 11:25:57 --> 404 Page Not Found: Audition_asset/newClient
 ERROR - 2020-03-15 11:26:39 --> 404 Page Not Found: Audition_asset/newClient
 ERROR - 2020-03-15 11:27:34 --> 404 Page Not Found: Audition_asset/newClient
+ERROR - 2020-03-15 11:42:12 --> 404 Page Not Found: admin/Admin/favicon.ico
+ERROR - 2020-03-15 11:42:25 --> 404 Page Not Found: admin/Slider/favicon.ico

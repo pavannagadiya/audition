@@ -25,8 +25,8 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="slider-content">
                 <!-- layer 1 -->
-                <!-- <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                  <h2 class="title1">The Best Business Information </h2>
+                <!-- <div class="layer-1-1 hidden-xs wow slideInDown slider-logo" data-wow-duration="2s" data-wow-delay=".2s">
+                  <img src="<?= RES_URL; ?>newClient/img/slider-logo.jpeg">
                 </div> -->
                 <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -53,7 +53,7 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center about-dhvani-font-weight">
-            <h4>હસીના ના ફુવારા સાથે એક રોમાંચક કહાની,</h4><br><h3>Bakka Ni Love Story</h3>
+            <h4>પ્રસ્તુત છે, એક અનોખી પ્રેમ કથા</h4><br><h4>હસીના ના ફુવારા સાથે એક રોમાંચક કહાની,</h4><br><h3>Bakka Ni Love Story</h3>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
           <div class="well-middle">
             <div class="single-well text-left about-dhvani-font-weight">
               <p>
-              Bollywood has made many movies of Love Story like Sanam Re, Dilwale Dulhania Le Jaayenge, Kuch Kuch Hota Hai, Veer Zaara, Dil Toh Pagal Hai, Maine Pyar Kiya. But we are coming with our new Gujarati Movie,Romantic and Suspense with a drama "Bakka Ni Love Story".
+              Bollywood has made many movies of Love Story like Sanam Re, Dilwale Dulhania Le Jaayenge, Kuch Kuch Hota Hai, Veer Zaara, Dil Toh Pagal Hai, Maine Pyar Kiya. But we are coming with our new Gujarati Movie, Romantic and Suspense with a drama "Bakka Ni Love Story".
               </p>
               <P>
               The Story Revolves Around a ROMANTIC Young and Enthusiastic Character Who Comes to City after a Disappointment and to Forget his Past love Story. And He Meets Someone to Make his life But Destiny Makes Something  which He don't Imagined. This Circumstances leads Him to Follow His Destiny for Which He is Not Sure. This Gujarati Movie Will Keep the Audience Entertained From Start Till end Because This Film is a Mixture of Suspense and Comedy with a Drama.
@@ -469,7 +469,7 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2>Pricing Table</h2>
+            <h2>Product and Services</h2>
           </div>
         </div>
       </div>

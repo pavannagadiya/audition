@@ -2411,3 +2411,11 @@ span.email-notes {
   transition: all 0.3s ease 0s;
   border-radius: 30px;
 }
+.slider-logo{
+  min-height: 150px !important;
+}
+.slider-logo img{
+  /* top:20px; */
+  height: 150px !important;
+  /* width: 150px !important; */
+}
