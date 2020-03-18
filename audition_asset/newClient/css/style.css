@@ -2412,10 +2412,12 @@ span.email-notes {
   border-radius: 30px;
 }
 .slider-logo{
-  min-height: 150px !important;
+  min-height: 60px !important;
 }
 .slider-logo img{
-  /* top:20px; */
-  height: 150px !important;
-  /* width: 150px !important; */
+	position: relative !important;
+    /* top: 25px !important;
+    left: 322px !important; */
+	max-width: none;
+  	height: 150px !important;
 }

@@ -25,9 +25,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="slider-content">
                 <!-- layer 1 -->
-                <!-- <div class="layer-1-1 hidden-xs wow slideInDown slider-logo" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="layer-1-1 hidden-xs wow slideInDown slider-logo " data-wow-duration="2s" data-wow-delay=".2s">
                   <img src="<?= RES_URL; ?>newClient/img/slider-logo.jpeg">
-                </div> -->
+				  <!-- <h1>Logo</h1> -->
+                </div>
                 <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
                   <h1 class="title2"><?= $image['slider_title']; ?></h1>
