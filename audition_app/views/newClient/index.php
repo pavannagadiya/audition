@@ -1,7 +1,7 @@
 <!-- Start Slider Area -->
 <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
-      <div id="ensign-nivoslider" class="slides">
+      <div id="ensign-nivoslider" class="slides" style="height: 717px;">
         <?php
             $count = 0;
             foreach ($result as $key=>$image)
@@ -35,7 +35,7 @@
                 </div>
                 <!-- layer 3 -->
                 <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                  <a class="ready-btn right-btn page-scroll" href="#services"><?= $image['slider_button_name']; ?></a>
+                  <a class="ready-btn right-btn page-scroll" href="<?= $image['slider_url']; ?>"><?= $image['slider_button_name']; ?></a>
                   <!-- <a class="ready-btn page-scroll" href="#about">Learn More</a> -->
                 </div>
               </div>
@@ -54,11 +54,11 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center about-dhvani-font-weight">
-            <h4>પ્રસ્તુત છે, એક અનોખી પ્રેમ કથા</h4><br><h4>હસીના ના ફુવારા સાથે એક રોમાંચક કહાની,</h4><br><h3>Bakka Ni Love Story</h3>
+            <h4>પ્રસ્તુત છે, એક અનોખી પ્રેમ કથા</h4><br><h3>Bakka Ni Love Story</h3><br><h4>હસીના ના ફુવારા સાથે એક રોમાંચક કહાની,</h4>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-top: 5%;">
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-middle">
             <div class="single-well text-left about-dhvani-font-weight">
@@ -157,94 +157,95 @@
       </div>
       <div class="row text-center">
         <div class="services-contents">
-          <!-- Start Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-camera-retro"></i>
-										</a>
-                  <h4>Social Marketer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+          <div class="row">
+
+            <!-- Start Left services -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                        <i class="fa fa-camera-retro"></i>
+                      </a>
+                    <h4>Social Marketer</h4>
+                    <p>
+                    We are very active marketing on social medias like YouTube ,Tiktok, Facebook, Instagram, Twitter,Linkedin and much more.
+                    </p>
+                  </div>
                 </div>
+                <!-- end about-details -->
               </div>
-              <!-- end about-details -->
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                        <i class="fa fa-mobile"></i>
+                      </a>
+                    <h4>App Development</h4>
+                    <p>
+                      We are very strong in App developing and app Publishing it, we are done many projects with customer satisfaction.
+                    </p>
+                  </div>
+                </div>
+                <!-- end about-details -->
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <!-- end col-md-4 -->
+              <div class=" about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                        <i class="fa fa-code"></i>
+                      </a>
+                    <h4>Web Development</h4>
+                    <p>
+                      We are as strong as in also seo and website development.
+                    </p>
+                  </div>
+                </div>
+                <!-- end about-details -->
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-mobile"></i>
-										</a>
-                  <h4>App Development</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+          <div class="row">
+            <!-- End Left services -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!-- end col-md-4 -->
+              <div class=" about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                        <i class="fa fa-bar-chart"></i>
+                      </a>
+                    <h4>Seo Expart</h4>
+                    <p>
+                      Our team is expert on Seo and As you know we are very strong marketing in social media so we are easily Seo on that platform that's our plus point.
+                    </p>
+                  </div>
                 </div>
+                <!-- end about-details -->
               </div>
-              <!-- end about-details -->
             </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-code"></i>
-										</a>
-                  <h4>Web Development</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+            <!-- End Left services -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!-- end col-md-4 -->
+              <div class=" about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                        <i class="fa fa-dollar"></i>
+                      </a>
+                    <h4>Sponsor</h4>
+                    <p>
+                      We are getting from many sponsors and all that sponsors: contact for sponsors, for Youtube ,Tiktok ,Facebook videos
+                    </p>
+                  </div>
                 </div>
+                <!-- end about-details -->
               </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-12">
-            <!-- end col-md-4 -->
-           
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-bar-chart"></i>
-										</a>
-                  <h4>Seo Expart</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-dollar"></i>
-										</a>
-                  <h4>Sponsor</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
             </div>
           </div>
         </div>
@@ -326,143 +327,167 @@
 
   <!-- Start portfolio Area -->
   <div id="portfolio" class="portfolio-area area-padding fix">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>Our Portfolio</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Start Portfolio -page -->
-        <div class="awesome-project-1 fix">
+      <div class="container">
+        <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="awesome-menu ">
-              <ul class="project-menu">
-                <li>
-                  <a href="#" class="active" data-filter="*">All</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".development">Development</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".design">Design</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".photo">Photoshop</a>
-                </li>
-              </ul>
+            <div class="section-headline text-center">
+              <h2>Our Portfolio</h2>
             </div>
           </div>
         </div>
-        <div class="awesome-project-content">
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/1.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/1.jpg">
-                      <h4>Business City</h4>
-                      <span>Web Development</span>
-                    </a>
+        <div class="row">
+          <!-- Start Portfolio -page -->
+          <div class="awesome-project-1 fix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="awesome-menu ">
+                <ul class="project-menu">
+                  <li>
+                    <a href="#" class="active" data-filter="*">All</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".development">Development</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".design">Design</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".photo">Photoshop</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="awesome-project-content">
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 design development">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p7.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p7.jpeg">
+                        <h4>Business City</h4>
+                        <span>Web Development</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 photo">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/2.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/2.jpg">
-                      <h4>Blue Sea</h4>
-                      <span>Photosho</span>
-                    </a>
+            <!-- single-awesome-project end -->
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 photo">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p8.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p8.jpeg">
+                        <h4>Blue Sea</h4>
+                        <span>Photosho</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/3.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/3.jpg">
-                      <h4>Beautiful Nature</h4>
-                      <span>Web Design</span>
-                    </a>
+            <!-- single-awesome-project end -->
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 design">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p9.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p9.jpeg">
+                        <h4>Beautiful Nature</h4>
+                        <span>Web Design</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 photo development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/4.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/4.jpg">
-                      <h4>Creative Team</h4>
-                      <span>Web design</span>
-                    </a>
+            <!-- single-awesome-project end -->
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 photo development">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p10.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p10.jpeg">
+                        <h4>Creative Team</h4>
+                        <span>Web design</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/5.jpg" alt="" /></a>
-                <div class="add-actions text-center text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/5.jpg">
-                      <h4>Beautiful Flower</h4>
-                      <span>Web Development</span>
-                    </a>
+            <!-- single-awesome-project end -->
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 development">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p11.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p11.jpeg">
+                        <h4>Beautiful Flower</h4>
+                        <span>Web Development</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design photo">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/6.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/6.jpg">
-                      <h4>Night Hill</h4>
-                      <span>Photoshop</span>
-                    </a>
+            <!-- single-awesome-project end -->
+            <!-- single-awesome-project start -->
+            <div class="col-md-4 col-sm-4 col-xs-12 design photo">
+              <div class="single-awesome-project">
+                <div class="awesome-img">
+                  <a href="#">
+                    <div class="profile-img">
+                      <img src="<?= RES_URL; ?>newClient/img/portfolio/p12.jpeg" alt="" />
+                    </div>
+                  </a>
+                  <div class="add-actions text-center">
+                    <div class="project-dec">
+                      <a class="venobox" data-gall="myGallery" href="<?= RES_URL; ?>newClient/img/portfolio/p12.jpeg">
+                        <h4>Night Hill</h4>
+                        <span>Photoshop</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- single-awesome-project end -->
           </div>
-          <!-- single-awesome-project end -->
         </div>
       </div>
     </div>
-  </div>
   <!-- awesome-portfolio end -->
   <!-- start pricing area -->
   <div id="pricing" class="pricing-area area-padding">

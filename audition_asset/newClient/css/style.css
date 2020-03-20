@@ -1794,6 +1794,10 @@ div#preloader {
   float: left;
   padding: 1px;
   width: 33.33%;
+  height: 67px !important;
+}
+.flicker-img>a img {
+  height: 100% !important;
 }
 
 .footer-icons {
@@ -2420,4 +2424,15 @@ span.email-notes {
     left: 322px !important; */
 	max-width: none;
   	height: 150px !important;
+}
+.reg-social{
+  padding-bottom: 2% !important;
+  padding-left: 1% !important;
+}
+
+.profile-img{
+ height: 200px !important;
+}
+.profile-img img{
+ height: 100% !important;
 }

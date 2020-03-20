@@ -52,12 +52,12 @@
               <div class="footer-head">
                 <h4>Instagram</h4>
                 <div class="flicker-img">
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/1.jpg" alt=""></a>
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/2.jpg" alt=""></a>
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/3.jpg" alt=""></a>
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/4.jpg" alt=""></a>
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/5.jpg" alt=""></a>
-                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/6.jpg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p7.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p8.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p9.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p10.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p11.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= RES_URL; ?>newClient/img/portfolio/p12.jpeg" alt=""></a>
                 </div>
               </div>
             </div>
