@@ -319,8 +319,7 @@
 							/* (data.status === true)?swal("Good job!", "Your Registrations is Successfully", "success"):swal("This Email-id or Phone Number is Already Registered.!", "Please try again", "error"); */
               
               if (data.status) {
-					var totalAmount = 100;
-          var user_id = data.id;
+					var totalAmount = 200;
 					// var product_id = $(this).attr("data-id");
 					var options = {
 						"key": "<?= RZP_KEY_ID; ?>",
@@ -328,15 +327,16 @@
 						"name": "Test",
 						"description": "Payment",
 						"handler": function(response) {
+							console.log(response);
+							form_data.append('razorpay_payment_id',response.razorpay_payment_id);
+							form_data.append('totalAmount',totalAmount);
 							$.ajax({
 								url: "<?= site_url('site/razorPaySuccess') ?>",
 								type: 'post',
 								dataType: 'json',
-								data: {
-									razorpay_payment_id: response.razorpay_payment_id,
-									totalAmount: totalAmount,
-                  user_id:  user_id
-								},
+								data: form_data,
+								contentType: false,
+								processData: false,
 								success: function(msg) {
 									swal("Good job!", "Your Registrations is Successfully", "success");
 								}

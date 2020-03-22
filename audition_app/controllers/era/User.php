@@ -26,7 +26,7 @@ this method for create new user in db */
                 ];
                 $this->response($response, REST_Controller::HTTP_OK);
             } else {
-                $data['user_contact'] = $this->post('user_contact');
+                /* $data['user_contact'] = $this->post('user_contact');
                 $data['user_email'] = $this->post('user_email');
                 $data['user_state'] = $this->post('user_state');
                 $data['user_name'] = $this->post('user_name');
@@ -38,7 +38,7 @@ this method for create new user in db */
                 $data['user_address'] = $this->post('user_address');
 
 
-                $result = $this->user_model->create_user($data);
+                $result = $this->user_model->create_user($data); */
                 /* $user_image = $this->user_image_post($result); */
                 /* if (empty($user_image['status'])) {
                     $response = [
@@ -48,7 +48,7 @@ this method for create new user in db */
                     $this->response($response, REST_Controller::HTTP_OK);
                 } */
 
-                if (!empty($result)) {
+                /* if (!empty($result)) {
                     $response = [
                         'status' => true,
                         'message' => 'User create successful.',
@@ -59,9 +59,14 @@ this method for create new user in db */
                         'status' => false,
                         'message' => 'Problem in creating user.',
                     ];
-                }
-            }
-            $this->response($response, REST_Controller::HTTP_OK);
+                } */
+                $response = [
+                        'status' => true,
+                        'message' => 'User create successful.',
+                    ];
+
+                $this->response($response, REST_Controller::HTTP_OK);
+        	}
         } else {
             $response = [
                 'status' => false,
