@@ -6,11 +6,74 @@
     font-weight: 700;
     margin-left: 2%;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #3ec1d5;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#search-text-input{
+    border-top:thin solid  #e5e5e5;
+    border-right:thin solid #e5e5e5;
+    border-bottom:0;
+    border-left:thin solid  #e5e5e5;
+    box-shadow:0px 1px 1px 1px #e5e5e5;
+    float:left;
+    height:17px;
+    margin:.8em 0 0 .5em; 
+    outline:0;
+    padding:.4em 0 .4em .6em; 
+    width:183px; 
+}
+  
+#button-holder{
+    background-color:#f1f1f1;
+    border-top:thin solid #e5e5e5;
+    box-shadow:1px 1px 1px 1px #e5e5e5;
+    cursor:pointer;
+    float:left;
+    height:35px;
+    margin:11px 0 0 0;
+    text-align:center;
+    width:50px;
+}
+  
+#button-holder img{
+    margin:4px;
+    width:20px; 
+}
+.search-div{
+	position: absolute;
+    right: 0;
+}
+.search-div input{
+	height:auto !important;
+}
 </style>
 <main class="site-content" role="main">
-
+  <a href="<?= site_url('site/index') ?>">
+<button id="myBtn" title="Go to Home"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+    
+  </a>
 	<!-- end about section -->
 	<section class="">
+	<div class="search-div">
+	<form id="search-date">
+		<input type='text' maxlength="10" pattern="[1-9]{1}[0-9]{9}" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" name="mobile" placeholder='Search...' id='search-text-input' />
+			<button type="submit" id='button-holder'>
+    			<img src='https://png.pngtree.com/png-clipart/20190516/original/	pngtree-find-vector-icon-png-image_3725277.jpg' />
+			</button>
+	</form>
+	</div>
     
 		<h1 class="reg-banner-name">Dhvani Add Groups</h1>
 		<img  src="<?= RES_URL; ?>newClient/reg/banner2.jpg">
@@ -49,7 +112,7 @@
           <div class="well-left">
             <div class="single-well">
               <a href="#">
-             <img src="<?= RES_URL; ?>newClient/reg/client.webp" alt="">
+             <img src="<?= RES_URL; ?>newClient/img/reg-image.jpg" alt="">
                 </a>
             </div>
           </div>
@@ -102,7 +165,7 @@
                 <div class="input-field form-group">
                 	<label>Your Contact Number</label>
                 	<span class="span-error">*</span>
-                  <input type="text" name="user_contact" class="form-control inputshape" placeholder="Contact Number" required>
+                  <input type="text" name="user_contact" class="form-control inputshape" placeholder="Contact Number" required maxlength="10" pattern="[1-9]{1}[0-9]{9}" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;">
                   <div class="validation"></div>
                 </div>
               </div>
@@ -147,7 +210,7 @@
                 <div class="input-field form-group">
                 	<label>Experience (In Years)</label>
                 	<span class="span-error">*</span>
-                  <input type="text" name="experience" class="form-control inputshape" placeholder="Experience (In Years)" required>
+                  <input type="text" name="experience" class="form-control inputshape" placeholder="Experience (In Years)" required onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;">
                   <div class="validation"></div>
                 </div>
               </div>
@@ -273,15 +336,18 @@
               </div>
             
             </div>
-                <div class="text-center"><button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button></div>
-              </form>
-            </div>
-          </div>
-          <!-- End Left contact -->
-        </div>
-      </div>
-    </div>
-    <div class="footer-icons">
+          <div class="row">
+              <div class="col-lg-6">
+                <div class="input-field form-group">
+                    <label class="">
+                      <input type="checkbox" class='' name="" id=""  onClick="EnableSubmit(this)" value="conditions"> <b>I Have Read and Agree to The Terms & Conditions </b>
+                    </label>
+
+                </div>
+              </div>
+              <div class="col-lg-6 text-right">
+                <div class="input-field form-group">
+                    <div class="footer-icons">
                     <ul class="reg-social">
                       <li>
                         <a href="http://www.facebook.com/Dhvaniaddgroups/"><i class="fa fa-facebook"></i></a>
@@ -299,6 +365,21 @@
                   </div>
   </div>
 	<!-- end Contact section -->
+
+                </div>
+              </div>
+            
+            </div>
+                <div class="text-center"><button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
+                  <button type="submit" class="btn btn-blue btn-effect" onclick="this.form.reset();">Clear</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Left contact -->
+        </div>
+      </div>
+    </div>
 </main>
 <?php $this->load->view('newClient/script'); ?>
 <script type="text/javascript">
@@ -331,15 +412,26 @@
 							form_data.append('razorpay_payment_id',response.razorpay_payment_id);
 							form_data.append('totalAmount',totalAmount);
 							$.ajax({
-								url: "<?= site_url('site/razorPaySuccess') ?>",
+								url: "<?= site_url('era/user/razorPaySuccess') ?>",
 								type: 'post',
 								dataType: 'json',
 								data: form_data,
 								contentType: false,
 								processData: false,
-								success: function(msg) {
-									swal("Good job!", "Your Registrations is Successfully", "success");
-								}
+
+								success: function(msg){
+									console.log(response);
+                            swal({
+                                title: "Success!",
+                                text:  "You are now following",
+                                type: "success",
+                                timer: 3000,
+                                showConfirmButton: false
+                            });
+                        window.setTimeout(function(){ } ,3000);
+                        location.reload();
+
+                    }
 							});
 
 						},
@@ -352,7 +444,7 @@
 					rzp1.open();
 					e.preventDefault();
 				} else {
-					swal("Payment !", "Please try again", "error");
+					swal("Check details", "Please give correct details.", "error");
 				}
 							
 						},
@@ -360,6 +452,28 @@
 							console.log('error');
 						}
 					});
+				});
+
+				$('#search-date').on('submit',function (e) {
+				  e.preventDefault();
+				  var form = $('#search-date');
+					var form_data = new FormData($(form)[0]);
+						$.ajax({
+						url:"<?=site_url('era/user/checkDate')?>",
+						type:'post',
+						dataType:'json',
+						data : form_data,
+						contentType: false,
+						processData: false,
+						
+						success: function (data) {
+							if (data.data) {
+							swal("Your date is", data.data, "success");
+							} else {
+							swal("Date not assign yet", "Sorry !", "error");
+							}
+						}
+						});
 				});
 </script>
 <script type="text/javascript">
@@ -387,5 +501,41 @@
     }
   }
 
+}
+</script>
+<script type="text/javascript">
+  EnableSubmit = function (val) {
+    var sbmt = document.getElementById("submit");
+
+    if (val.checked == true) {
+        sbmt.disabled = false;
+    } else {
+        sbmt.disabled = true;
+    }
+}
+
+EnableSubmit({checked:0});
+
+document.getElementById("reg").reset();
+</script>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>

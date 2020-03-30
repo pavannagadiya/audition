@@ -47,7 +47,7 @@ class Admin extends CI_Controller {
             redirect('admin/home');
         } else {
             $this->session->set_flashdata('msg', 'Email or Password woring');
-            redirect('admin/index');
+			redirect('admin/index');
         }
 
 	}

@@ -12,5 +12,6 @@
 <!-- Contact Form JavaScript File -->
 <script src="<?= RES_URL; ?>newClient/contactform/contactform.js"></script>
 <script src="<?= RES_URL; ?>newClient/js/main.js"></script>
-<script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>

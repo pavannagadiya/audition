@@ -32,6 +32,14 @@ if($user_info){
 			</div>
 			<div class="card-body">
 				<form action="<?=base_url('admin/check_login')?>" method="POST">
+				<div class="msg text-warning">
+                    <?php if ($this->session->flashdata('msg')) {?>
+                    <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Error!</strong> <?php echo $this->session->flashdata('msg'); ?>
+                </div>
+                <?php }?>
+                    </div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>

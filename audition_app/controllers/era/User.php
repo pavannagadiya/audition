@@ -1,6 +1,8 @@
 <?php
 
 use \Firebase\JWT\JWT;
+use Razorpay\Api\Api as RazorpayApi;
+use Razorpay\Api\Errors\SignatureVerificationError;
 
 class User extends Audi_Controller
 {
@@ -92,6 +94,23 @@ this method for create new user in db */
         }
         $this->response($response, REST_Controller::HTTP_OK);
     }
+    public function checkDate_post()
+    {
+		$mobile = $this->post('mobile');
+		$result = $this->user_model->checkDate($mobile);
+        if (!empty($result)) {
+            $response = [
+                'status' => true,
+                'data' => $result['assign_date'],
+            ];
+        } else {
+            $response = [
+                'status' => false,
+                'message' => 'No user found !!!',
+            ];
+        }
+        $this->response($response, REST_Controller::HTTP_OK);
+    }
 
     // public function user_image_post($id)
     // {
@@ -155,5 +174,40 @@ this method for create new user in db */
     //     $config['max_size'] = '0';
 
     //     return $config;
-    // }
+	// }
+	
+	public function razorPaySuccess_post()
+    {
+        $data = [
+            'payment_id' => $this->input->post('razorpay_payment_id'),
+			'amount' => $this->input->post('totalAmount'),
+			'user_contact' => $this->input->post('user_contact'),
+			'user_email' => $this->input->post('user_email'),
+			'user_state' => $this->input->post('user_state'),
+			'user_name' => $this->input->post('user_name'),
+			'user_categories' => $this->input->post('user_categories'),
+			'experience' => $this->input->post('experience'),
+			'qualification' => $this->input->post('qualification'),
+			'taluko' => $this->input->post('taluko'),
+			'district' => $this->input->post('district'),
+			'user_address' => $this->input->post('user_address'),
+
+        ];
+        $api = new RazorpayApi(RZP_KEY_ID, RZP_KEY_SECRET);
+        $payment  = $api->payment->fetch($data['payment_id']);
+        $payment->capture(array('amount' => ($data['amount'] * 100)));
+		$data['TransactionNumber'] = $payment->id;
+		$data['Status'] = $payment->status;
+		$data['PaymentType'] = $payment->method;
+		if (!empty($payment->id)) {
+			$result = $this->user_model->create_user($data);
+			if (!empty($result)) {
+				$response = [
+					'status' => true,
+					'message' => 'User create successful.',
+				];
+				$this->response($response, REST_Controller::HTTP_OK);
+            }
+		}
+	}
 }

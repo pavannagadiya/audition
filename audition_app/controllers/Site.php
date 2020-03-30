@@ -38,7 +38,15 @@ class Site extends CI_Controller
     {
         $this->load->template_reg('newClient/reg');
     }
-    public function razorPaySuccess()
+    public function privacy()
+    {
+        $this->load->terms_condition_template('newClient/privacy');
+    }
+    public function terms()
+    {
+        $this->load->terms_condition_template('newClient/terms');
+    }
+    /* public function razorPaySuccess()
     {
         $data = [
             'payment_id' => $this->input->post('razorpay_payment_id'),
@@ -62,8 +70,14 @@ class Site extends CI_Controller
 		$data['Status'] = $payment->status;
 		$data['PaymentType'] = $payment->method;
 		if (!empty($payment->id)) {
-			$this->user_model->create_user($data);
+			$result = $this->user_model->create_user($data);
+			if (!empty($result)) {
+				$response = [
+					'status' => true,
+					'message' => 'User create successful.',
+				];
+				$this->response($response, REST_Controller::HTTP_OK);
+            }
 		}
-		return $data;
-    }
+    } */
 }

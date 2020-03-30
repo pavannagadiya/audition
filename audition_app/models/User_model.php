@@ -40,9 +40,25 @@ class User_model extends CI_Model
         $data['user'] = $this->db->select('*')
             ->from('user_registration')
             ->get()->num_rows();
+        $data['assign_date_users'] = $this->db->select('*')
+			->from('user_registration')
+			->where('assign_date is NOT NULL', null, false)
+            ->get()->num_rows();
+        $data['not_assign_date_users'] = $this->db->select('*')
+			->from('user_registration')
+			->where('assign_date', null)
+            ->get()->num_rows();
         $data['slider'] = $this->db->select('*')
             ->from('audition_slider')
             ->get()->num_rows();
+        return $data;
+    }
+    public function dateNotAssignIds()
+    {
+        $data = $this->db->select('id')
+			->from('user_registration')
+			->where('assign_date', null)
+            ->get()->result_array();
         return $data;
     }
     public function single_user($id)
@@ -73,6 +89,24 @@ class User_model extends CI_Model
             ->get();
         $result = $query->row_array();
         return $result;
+    }
+    public function checkDate($number)
+    {
+        $query = $this->db->select('assign_date')
+            ->from('user_registration')
+            ->where('user_contact', $number)
+            ->get();
+        $result = $query->row_array();
+        return $result;
+    }
+    public function assign_date($id, $date)
+    {
+		foreach ($id as $id) {
+			$this->db->set('assign_date',$date);
+			$this->db->where('id',$id);
+        	$this->db->update('user_registration');
+		}
+		return;
     }
 }
 ?>

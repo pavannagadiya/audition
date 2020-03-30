@@ -2436,3 +2436,15 @@ span.email-notes {
 .profile-img img{
  height: 100% !important;
 }
+
+.terms-condition li{
+	color: #000 !important;
+	font-size: 17px;
+}
+.privacy-page{
+	margin-top: 7%;
+}
+
+.terms-pricy-banner{
+	width: 100%;
+}

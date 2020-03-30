@@ -20,14 +20,32 @@ class Participants extends CI_Controller
             ->unset_column('id')
             ->add_column('View', '$1', 'callback_user_view(id)');
         echo $this->datatables->generate();
-        /* $this->datatables->select('u.id,u.user_name,u.user_email,u.user_state,p.user_photo')
-            ->from('user_registration u')
-            ->join('user_photos p', 'u.id = p.user_id AND p.img_istitle = 1', 'left outer')
+	}
+	public function date_assigned_user()
+	{
+		$this->load->template_admin('admin/date_assigned_participants');
+	}
+	public function date_assigned_participants()
+    {
+        $this->datatables->select('u.id,u.user_name,u.user_email,u.user_state')
+			->from('user_registration u')
+			->where('u.assign_date IS NOT NULL', null, false)
             ->unset_column('id')
-            ->unset_column('user_photo')
-            ->add_column('Image', '$1', 'callback_user_image(user_photo)')
             ->add_column('View', '$1', 'callback_user_view(id)');
-        echo $this->datatables->generate(); */
+        echo $this->datatables->generate();
+    }
+	public function date_not_assigned_user()
+	{
+		$this->load->template_admin('admin/date_not_assigned_participants');
+	}
+	public function date_not_assigned_participants()
+    {
+        $this->datatables->select('u.id,u.user_name,u.user_email,u.user_state')
+			->from('user_registration u')
+			->where('u.assign_date', null)
+            ->unset_column('id')
+            ->add_column('View', '$1', 'callback_user_view(id)');
+        echo $this->datatables->generate();
     }
     public function single_user()
     {
@@ -35,5 +53,18 @@ class Participants extends CI_Controller
         $data['user'] = $this->user_model->single_user($id);
         // echo"<pre>";print_r($data);die;
         $this->load->template_admin('admin/single_user',$data);
-    }
+	}
+	public function assigned_date_to_user()
+    {
+        $data['date'] = $this->user_model->dateNotAssignIds();
+        $this->load->template_admin('admin/assign',$data);
+	}
+		
+	public function formData()
+	{
+		$id = $this->input->post('ids[]');
+		$date = $this->input->post('date');
+		$this->user_model->assign_date($id,$date);
+		$this->load->template_admin_login('admin/login');
+	}
 }

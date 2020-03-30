@@ -104,7 +104,7 @@
           <div class="well-left">
             <div class="single-well">
               <a href="#">
-								  <img src="<?= RES_URL; ?>newClient/img/about/1.jpg" alt="">
+				<img src="<?= RES_URL; ?>newClient/img/home-image2.jpeg" alt="">
 								</a>
             </div>
           </div>

@@ -3,7 +3,7 @@
     <div class="footer-area text-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="col-md-4 col-sm-3 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
@@ -31,7 +31,18 @@
             </div>
           </div>
           <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="col-md-2 col-sm-3 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>quick link</h4>
+                <ul class="terms-condition">
+					<li><a target="_blank" href="<?= site_url('site/privacy') ?>">Privacy Policy</a></li>
+					<li><a target="_blank" href="<?= site_url('site/terms') ?>">Terms & Conditions</a></li>
+				</ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
                 <h4>information</h4>
@@ -47,7 +58,7 @@
             </div>
           </div>
           <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
                 <h4>Instagram</h4>
