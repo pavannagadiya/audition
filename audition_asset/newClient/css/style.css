@@ -40,6 +40,19 @@ html, body {
   height: 100%;
 }
 
+    
+.search-div{
+	position: absolute !important;
+	right: 0 !important;
+	top: 28px !important;
+}
+.search-div input{
+	height:auto !important;
+}
+.search-div img{
+	height:20px !important;
+}
+
 .floatleft {
   float: left;
 }

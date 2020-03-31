@@ -21,43 +21,6 @@
   padding: 15px;
   border-radius: 4px;
 }
-#search-text-input{
-    border-top:thin solid  #e5e5e5;
-    border-right:thin solid #e5e5e5;
-    border-bottom:0;
-    border-left:thin solid  #e5e5e5;
-    box-shadow:0px 1px 1px 1px #e5e5e5;
-    float:left;
-    height:17px;
-    margin:.8em 0 0 .5em; 
-    outline:0;
-    padding:.4em 0 .4em .6em; 
-    width:183px; 
-}
-  
-#button-holder{
-    background-color:#f1f1f1;
-    border-top:thin solid #e5e5e5;
-    box-shadow:1px 1px 1px 1px #e5e5e5;
-    cursor:pointer;
-    float:left;
-    height:35px;
-    margin:11px 0 0 0;
-    text-align:center;
-    width:50px;
-}
-  
-#button-holder img{
-    margin:4px;
-    width:20px; 
-}
-.search-div{
-	position: absolute;
-    right: 0;
-}
-.search-div input{
-	height:auto !important;
-}
 </style>
 <main class="site-content" role="main">
   <a href="<?= site_url('site/index') ?>">
@@ -66,14 +29,6 @@
   </a>
 	<!-- end about section -->
 	<section class="">
-	<div class="search-div">
-	<form id="search-date">
-		<input type='text' maxlength="10" pattern="[1-9]{1}[0-9]{9}" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" name="mobile" placeholder='Search...' id='search-text-input' />
-			<button type="submit" id='button-holder'>
-    			<img src='https://png.pngtree.com/png-clipart/20190516/original/	pngtree-find-vector-icon-png-image_3725277.jpg' />
-			</button>
-	</form>
-	</div>
     
 		<h1 class="reg-banner-name">Dhvani Add Groups</h1>
 		<img  src="<?= RES_URL; ?>newClient/reg/banner2.jpg">
@@ -237,7 +192,27 @@
                   </textarea>
                 </div>
               </div>
-            </div>
+			<div class="col-lg-6">
+                <div class="input-field form-group">
+                	
+    				<div class="footer-icons" style="padding-top: 7%;">
+						<ul class="reg-social">
+						<li>
+							<a href="http://www.facebook.com/Dhvaniaddgroups/"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="http://www.instagram.com/dhvaniaddgroups/"><i class="fa fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="http://www.youtube.com/channel/UChc9LPpX99H_KuAMu2R8LUg"><i class="fa fa-youtube"></i></a>
+						</li>
+						</ul>
+                  </div>
+  			</div>
+			</div>
           <div class="form-group row">
               <div class="col-lg-6">
                 <div class="input-field form-group">
@@ -336,35 +311,12 @@
               </div>
             
             </div>
-          <div class="row">
-              <div class="col-lg-6">
+          <div class="form-group row">
+              <div class="col-lg-12">
                 <div class="input-field form-group">
                     <label class="">
                       <input type="checkbox" class='' name="" id=""  onClick="EnableSubmit(this)" value="conditions"> <b>I Have Read and Agree to The Terms & Conditions </b>
                     </label>
-
-                </div>
-              </div>
-              <div class="col-lg-6 text-right">
-                <div class="input-field form-group">
-                    <div class="footer-icons">
-                    <ul class="reg-social">
-                      <li>
-                        <a href="http://www.facebook.com/Dhvaniaddgroups/"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="http://www.instagram.com/dhvaniaddgroups/"><i class="fa fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa fa-google"></i></a>
-                      </li>
-                      <li>
-                        <a href="http://www.youtube.com/channel/UChc9LPpX99H_KuAMu2R8LUg"><i class="fa fa-youtube"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-  </div>
-	<!-- end Contact section -->
 
                 </div>
               </div>
@@ -380,6 +332,24 @@
         </div>
       </div>
     </div>
+    <!-- <div class="footer-icons">
+                    <ul class="reg-social">
+                      <li>
+                        <a href="http://www.facebook.com/Dhvaniaddgroups/"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="http://www.instagram.com/dhvaniaddgroups/"><i class="fa fa-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                      </li>
+                      <li>
+                        <a href="http://www.youtube.com/channel/UChc9LPpX99H_KuAMu2R8LUg"><i class="fa fa-youtube"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+  </div> -->
+	<!-- end Contact section -->
 </main>
 <?php $this->load->view('newClient/script'); ?>
 <script type="text/javascript">
@@ -452,28 +422,6 @@
 							console.log('error');
 						}
 					});
-				});
-
-				$('#search-date').on('submit',function (e) {
-				  e.preventDefault();
-				  var form = $('#search-date');
-					var form_data = new FormData($(form)[0]);
-						$.ajax({
-						url:"<?=site_url('era/user/checkDate')?>",
-						type:'post',
-						dataType:'json',
-						data : form_data,
-						contentType: false,
-						processData: false,
-						
-						success: function (data) {
-							if (data.data) {
-							swal("Your date is", data.data, "success");
-							} else {
-							swal("Date not assign yet", "Sorry !", "error");
-							}
-						}
-						});
 				});
 </script>
 <script type="text/javascript">

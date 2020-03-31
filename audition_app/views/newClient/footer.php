@@ -37,6 +37,7 @@
                 <h4>quick link</h4>
                 <ul class="terms-condition">
 					<li><a target="_blank" href="<?= site_url('site/privacy') ?>">Privacy Policy</a></li>
+					<br>
 					<li><a target="_blank" href="<?= site_url('site/terms') ?>">Terms & Conditions</a></li>
 				</ul>
               </div>

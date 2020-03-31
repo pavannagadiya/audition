@@ -23,7 +23,7 @@ if(empty($user_info)){
 							<form method="post" action="<?= site_url('admin/participants/formData')?>">
 								<div class="form-group">
 									<label for="slider_photo"><b>Select the users</b></label>
-									<select name="ids[]" id="id" multiple="multiple">
+									<select name="ids[]" id="id" multiple="multiple" required>
 										<option value="" disabled selected>Set Date</option>
 										<?php
 										foreach ($date as $data) { ?>
@@ -34,7 +34,7 @@ if(empty($user_info)){
 								</div>
 								<div class="form-group">
 									<label for="slider_photo"><b>Select date</b></label>
-									<input type="date" id="birthday" name="date">
+									<input type="date" id="birthday" name="date" required>
 								</div>
 									<button type="submit" class="btn btn-primary">Submit</button>
 									<button type="reset" class="btn btn-danger">Reset</button>

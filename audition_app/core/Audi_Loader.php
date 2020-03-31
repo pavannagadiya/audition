@@ -87,13 +87,13 @@ class Audi_Loader extends CI_Loader {
         
         if($return):
             $content  = $this->view('newClient/header', $vars, $return);
-            //$content  = $this->view('newClient/nav', $vars, $return);
+            $content  = $this->view('newClient/nav_reg', $vars, $return);
             $content .= $this->view($template_name, $vars, $return);
             $content .= $this->view('newClient/footer', $vars, $return);
             return $content;
         else:
             $this->view('newClient/header', $vars);
-           // $this->view('newClient/nav', $vars);
+            $this->view('newClient/nav_reg', $vars);
             $this->view($template_name, $vars);
             $this->view('newClient/footer', $vars);
         endif;
